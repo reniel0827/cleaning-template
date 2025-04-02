@@ -1,0 +1,187 @@
+---
+title: 'Contact | YEG Carpet Cleaning Services'
+description: 'Reach out to YEG Carpet Cleaning Services'
+preloadImg: '/assets/images/cta-bg.webp'
+permalink: 'contact/'
+eleventyNavigation:
+    key: Contact Us
+    order: 600
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/css/contact.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
+
+<section id="int-hero">
+    <h1 id="home-h">Contact Us</h1>
+    <picture>
+        <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/cta-bg.webp">
+        <img aria-hidden="true" decoding="async" src="/assets/images/cta-bg.webp" alt="kitchen cabinets"
+            loading="eager" width="2500" height="1667">
+    </picture>
+</section>
+                                
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-322">
+    <div class="bespoke-container">
+        <div class="bespoke-content">
+            <span class="bespoke-topper">Contact Us</span>
+            <h2 class="bespoke-title">Call Us for Clean Homes, Offices & Carpets Today!<br />
+                Or Book Online anytime for your convenience!
+            </h2>
+            <!--Form-->
+            <form netlify class="bespoke-form" id="bespoke-form-322" name="Contact Form" method="post">
+                <label class="bespoke-label">
+                    <input class="bespoke-input" required type="text" id="name-322" name="name" placeholder="Name">
+                </label>
+                <label class="bespoke-label bespoke-email">
+                    <input class="bespoke-input" required type="text" id="email-322" name="email" placeholder="Email">
+                </label>
+                <label class="bespoke-label bespoke-phone">
+                    <input class="bespoke-input" required type="text" id="phone-322" name="phone" placeholder="Phone">
+                </label>
+                <label class="bespoke-label bespoke-services">
+                    <select class="bespoke-input bespoke-select" required name="service" id="message-322" >
+                        <option class="bespoke-option bespoke-option-placeholder bespoke-input" value="">Select Service</option>
+                        <option class="bespoke-option bespoke-input" value="Residential Cleaning">Residential Cleaning</option>
+                        <option class="bespoke-option bespoke-input" value="Commercial Cleaning">Commercial Cleaning</option>
+                        <option class="bespoke-option bespoke-input" value="Carpet Cleaning Cleaning">Carpet Cleaning Cleaning</option>
+                    </select>
+                </label>
+                <button class="bespoke-button-solid bespoke-submit" type="submit">Book Now</button>
+            </form>
+        </div>
+        <div class="bespoke-right">
+            <!--Map Image, pin is made in the CSS-->
+            <picture class="bespoke-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d360109.35685605084!2d-113.49273724999999!3d53.526680549999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a0224580deff23%3A0x411fa00c4af6155d!2sEdmonton%2C%20AB%2C%20Canada!5e1!3m2!1sen!2sph!4v1731592243079!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </picture>
+            <ul class="bespoke-contact-group">
+                <li class="bespoke-item">
+                    <span class="bespoke-header">
+                        <img class="bespoke-icon" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone-gold.svg" alt="icon" width="20" height="20">
+                        Phone
+                    </span>
+                    <a href="tel:587-335-2755" class="bespoke-link">587-335-2755</a>
+                    <a href="tel:780-394-9380" class="bespoke-link">780-394-9380</a>
+                </li>
+                <li class="bespoke-item">
+                    <span class="bespoke-header">
+                        <img class="bespoke-icon" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-gold.svg" alt="icon" width="20" height="20">
+                        Address
+                    </span>
+                    <a href="https://maps.app.goo.gl/2v95qcLNJHxkGVjs5" class="bespoke-link">{{client.address.lineOne}}<br>
+                        {{client.address.lineTwo}}
+                        {{client.address.city}}
+                        {{client.address.state}}
+                        {{client.address.zip}}</a>
+                </li>
+                <li class="bespoke-item">
+                    <span class="bespoke-header">
+                        <img class="bespoke-icon" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/clock-gold.svg" alt="icon" width="20" height="20">
+                        Our Hours
+                    </span>
+                    <span class="bespoke-hours">Monday To Saturday</span>
+                    <span class="bespoke-hours">9:00 AM - 5:00 PM</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                     FAQ                      -->
+<!-- ============================================ -->
+
+<section id="faq-1236">
+    <div class="bespoke-container">
+        <div class="bespoke-content">
+            <span class="bespoke-topper">Asked questions</span>
+            <h2 class="bespoke-title">Frequently Asked Questions</h2>
+        </div>
+        <ul class="bespoke-faq-group">
+            <!-- Active class added as default -->
+            <li class="bespoke-faq-item active">
+                <button class="bespoke-button">
+                    <span class="bespoke-number">1</span>
+                    <span class="bespoke-button-text">
+                        How long does it take for the carpet to dry after cleaning?
+                    </span>
+                </button>
+                <p class="bespoke-item-p">
+                    We recommend professional carpet cleaning every 6 to 12 months, depending on foot traffic, pets, and any specific needs you may have.
+                </p>
+            </li>
+            <li class="bespoke-faq-item">
+                <button class="bespoke-button">
+                    <span class="bespoke-number">2</span>
+                    <span class="bespoke-button-text">
+                        What types of carpet cleaning methods do you use?
+                    </span>
+                </button>
+                <p class="bespoke-item-p">
+                    We offer various cleaning methods, including hot water extraction, steam cleaning, and dry cleaning, tailored to the type and condition of your carpet.
+                </p>
+            </li>
+            <li class="bespoke-faq-item">
+                <button class="bespoke-button">
+                    <span class="bespoke-number">3</span>
+                    <span class="bespoke-button-text">
+                        How long does it take for the carpet to dry after cleaning?
+                    </span>
+                </button>
+                <p class="bespoke-item-p">
+                    Drying time typically ranges from 4 to 12 hours, depending on the cleaning method used and ventilation in your home. We can offer tips to speed up the drying process.
+                </p>
+            </li>
+            <li class="bespoke-faq-item">
+                <button class="bespoke-button">
+                    <span class="bespoke-number">4</span>
+                    <span class="bespoke-button-text">
+                        Are the cleaning products you use safe for pets and children?
+                    </span>
+                </button>
+                <p class="bespoke-item-p">
+                    Yes, we use eco-friendly, non-toxic cleaning products that are safe for both children and pets, ensuring a clean and healthy home environment.
+                </p>
+            </li>
+            <li class="bespoke-faq-item">
+                <button class="bespoke-button">
+                    <span class="bespoke-number">5</span>
+                    <span class="bespoke-button-text">
+                        Can you remove tough stains like pet urine, wine, or coffee?
+                    </span>
+                </button>
+                <p class="bespoke-item-p">
+                    Absolutely! Our specialized stain removal techniques are effective on a variety of tough stains, including pet urine, wine, coffee, and more. However, results can vary based on stain age and carpet material.
+                </p>
+            </li>
+        </ul>
+    </div>
+    <!--Grey Swirl -->
+    <img class="bespoke-floater" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/swirl-grey.svg" alt="" loading="lazy" decoding="async" width="685" height="685" aria-hidden="true">
+    <script>
+        const faqItems = Array.from(document.querySelectorAll('.bespoke-faq-item'));
+            for (const item of faqItems) {
+                const onClick = () => {
+                item.classList.toggle('active')
+            }
+            item.addEventListener('click', onClick)
+            }                 
+    </script>
+</section>                    
+                                
+
+{% endblock %}

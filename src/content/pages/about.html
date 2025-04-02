@@ -1,0 +1,102 @@
+---
+title: 'About | YEG Carpet Cleaning Services'
+description: 'About YEG Carpet Cleaning Services'
+preloadImg: '/assets/images/cta-bg.webp'
+permalink: 'about/'
+eleventyNavigation:
+    key: About Us
+    order: 200
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/css/about.css">
+{% endblock %}
+
+{% block body %}
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
+
+<section id="int-hero">
+    <h1 id="home-h">About Us</h1>
+    <picture>
+        <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/cta-bg.webp">
+        <img aria-hidden="true" decoding="async" src="/assets/images/cta-bg.webp" alt="kitchen cabinets"
+            loading="eager" width="2500" height="1667">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs">
+    <div class="bespoke-container">
+        <!-- Left Image Section -->
+        <div class="bespoke-left">
+            <picture class="bespoke-picture bespoke-picture1">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/about-us-backphoto.webp">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/about-us-backphoto.webp">
+                <img aria-hidden="true" decoding="async" src="{{ client.domain }}/assets/images/about-us-backphoto.webp" alt="cabinets"
+                    loading="lazy" width="400" height="563">
+            </picture>
+            <picture class="bespoke-picture bespoke-picture2">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/about-us-optimized.webp">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/about-us-optimized.webp">
+                <img aria-hidden="true" decoding="async" src="{{ client.domain }}/assets/images/about-us-optimized.webp" alt="about us"
+                    loading="lazy" width="400" height="563">
+            </picture>
+        </div>
+        <!-- Right Content Section-->
+        <div class="bespoke-right">
+            <span class="bespoke-topper">About Us</span>
+            <h2 class="bespoke-title">YEG Carpet Cleaning Services</h2>
+            <p class="bespoke-text">
+                We started our small business with a simple vision: to provide honest, reliable, and top-quality cleaning services. What began as a venture with friends and colleagues has grown into a trusted name in Edmonton. As our clientele continues to grow, we’re proud to offer a full range of expert cleaning services.
+            </p>
+            <p class="bespoke-text">
+                From residential and commercial cleaning to carpet cleaning, deep cleaning, stain removal, and upholstery cleaning – we handle it all with a focus on integrity and customer satisfaction. Our dedicated team works hard to ensure every space we clean is fresh, spotless, and inviting. Whether it’s your home or business, we’re here to provide exceptional service you can rely on.
+            </p>
+            <div class="bespoke-flex-group">
+                <p class="bespoke-flex-p">
+                    We believe a clean space isn't just about appearance—it's about comfort, health, and peace of mind.
+                </p>
+                <span class="bespoke-name">Kelvin Canlas & Benneth Esguerra</span>
+                <span class="bespoke-job">Owner-Operator</span>
+                <img class="bespoke-quote-icon" loading="lazy" decoding="async"
+                    src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136"
+                    height="77" />
+            </div>
+            <a href="/about/" class="bespoke-button-solid">More About Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--            Side By Side Reverse              -->
+<!-- ============================================ -->
+
+<section id="sbsr-457">
+    <div class="bespoke-container">
+        <div class="bespoke-content">
+            <span class="bespoke-topper">Equipments</span>
+            <h2 class="bespoke-title">Advanced Equipment Ensuring Impeccable Cleanliness</h2>
+            <p class="bespoke-text">
+                We use high-quality, professional-grade equipment that is suitable for both commercial and residential cleaning. Rest assured, all of our tools are reliable and designed to deliver optimal results.
+            </p>
+        </div>
+        <picture class="bespoke-picture">
+            <source media="(max-width: 600px)" srcset="/assets/images/equipments.webp">
+            <source media="(min-width: 601px)" srcset="/assets/images/equipments.webp">
+            <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/equipments.webp" alt="equipments" width="649" height="617">
+        </picture>
+    </div>
+</section>
+                                
+
+{% include 'components/cta.html' %}
+
+{% endblock %}

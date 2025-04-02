@@ -1,0 +1,92 @@
+<!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<footer id="footer">
+    <div class="container">
+        <div class="left-section">
+            <a class="logo" href="/"><img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/yeg-logo.webp" alt="logo"
+                    width="264" height="78"></a>
+            <p>
+                Your trusted partners for a cleaner, fresher home and business.
+            </p>
+            <p>
+                <a href="https://www.facebook.com/profile.php?id=61565531703551&sk=reviews" target="_blank">
+                    <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/facebook-review.webp" alt="logo"
+                    width="120" height="55">
+                </a>
+                <a href="#">
+                    <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/google-review.webp" alt="logo"
+                    width="110" height="55">
+                </a>
+            </p>
+        </div>
+        <div class="right-section">
+            <div class="lists">
+                <ul>
+                    <li>
+                        <h2>Information</h2>
+                    </li>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/about/">About Us</a>
+                    </li>
+                    <li>
+                        <a href="/projects/">Projects</a>
+                    </li>
+                    <li>
+                        <a href="/reviews/">Reviews</a>
+                    </li>
+                    <li>
+                        <a href="/contact/">Contact</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <h2>Services</h2>
+                    </li>
+                    <li><a href="/services/residential/">Residential Cleaning</a></li>
+                    <li><a href="/services/commercial/">Commercial Cleaning</a></li>
+                    <li><a href="/services/carpet/">Carpet Cleaning</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <h2>Contact</h2>
+                    </li>
+                    <li>
+                        <a href="/contact/">
+                            {{client.address.lineOne}}<br>
+                            {{client.address.lineTwo}}<br>
+                            {{client.address.city}}
+                            {{client.address.state}}
+                            {{client.address.zip}}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:{{client.phoneForTel}}">
+                            T:
+                            {{client.phoneFormatted}}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:780-394-9380">
+                            T: 780-394-9380
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:{{client.email}}">yeg.carpetclean@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="credit">
+        <span>Designed and Hand Coded by</span>
+        <a href="https://bespokewebdesign.ca/" target="_blank" rel="noopener">Bespoke Web Design Edmonton</a>
+        <span class="copyright">
+            Copyright {% year %} - Present</span>
+    </div>
+</footer>

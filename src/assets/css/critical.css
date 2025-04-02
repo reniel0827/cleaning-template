@@ -1,0 +1,67 @@
+/* STYLES FOR ABOVE THE FOLD */
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #hero-1299 .bespoke-picture {
+    bottom: 6.25rem;
+  }
+}
+/* Larger Desktop - 1600px (Parallax Effect) */
+@media only screen and (min-width: 100rem) {
+  #hero-1299 .bespoke-background {
+    background: url("https://yegcarpetcleaning-draft.netlify.app/assets/images/yeg_cc-hero.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  #hero-1299 .bespoke-background img {
+    display: none;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #hero-1299 {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  body.dark-mode #hero-1299 .bespoke-title {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #hero-1299 .bespoke-text {
+    color: var(--bodyTextColorWhite);
+    opacity: 0.9;
+  }
+  body.dark-mode #hero-1299 .bespoke-card-group {
+    background-color: var(--dark);
+  }
+  body.dark-mode #hero-1299 .bespoke-item {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  body.dark-mode #hero-1299 .bespoke-item:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-color: rgba(0, 0, 0, 0.6);
+  }
+  body.dark-mode #hero-1299 .bespoke-h3,
+  body.dark-mode #hero-1299 .bespoke-item-text {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #hero-1299 .bespoke-item-text {
+    opacity: 0.8;
+  }
+  body.dark-mode #hero-1299 .bespoke-background {
+    opacity: 0.15;
+  }
+  body.dark-mode #hero-1299 .bespoke-background:before {
+    opacity: 0.5;
+    background: #000;
+  }
+}
+/* Dark Mode Tablet and Up Only */
+@media only screen and (min-width: 48rem) {
+  body.dark-mode #hero-1299 .bespoke-background {
+    opacity: 0.15;
+  }
+  body.dark-mode #hero-1299 .bespoke-background:before {
+    opacity: 0.8;
+    background: linear-gradient(89deg, #000000 30%, rgba(0, 0, 0, 0) 100%);
+  }
+}

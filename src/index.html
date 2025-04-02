@@ -1,0 +1,690 @@
+---
+title: 'YEG Carpet Cleaning Services - Edmonton'
+description: 'Your trusted partners for a cleaner, fresher home and business.'
+preloadImg: '/assets/images/landing.jpg'
+permalink: '/'
+tags:
+- sitemap # Ensure tags are formatted as a list, even for a single item
+eleventyNavigation:
+    key: Home
+    order: 100
+---
+
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/css/local.css" />
+<link rel="stylesheet" href="/assets/css/critical.css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Script for Netlify Identity -->
+<script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script defer>
+    if (window.netlifyIdentity) {
+        window
+            .netlifyIdentity
+            .on('init', (user) => {
+                if (!user) {
+                    window
+                        .netlifyIdentity
+                        .on('login', () => {
+                            document.location.href = '/admin/';
+                        });
+                }
+            });
+    }
+</script>
+
+<!-- JSON Schema Markup -->
+<script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "LocalBusiness",
+            "name": "{{ client.name }}",
+            {% if preloadImg %}"image": "{{ preloadImg }}",{% endif %}
+            {% if client.phoneFormatted %}"telephone": "{{ client.phoneFormatted }}",{% endif %}
+            {% if client.email %}"email": "{{ client.email }}",{% endif %}
+            {% if client.address %}
+                "address": {
+                    "@type": "PostalAddress"{% if client.address.lineOne %},
+                        "streetAddress": "{{ client.address.lineOne }}{% if client.address.lineTwo %}, {{ client.address.lineTwo }}{% endif %}"
+                    {% endif %}
+                    {% if client.address.city %},
+                        "addressLocality": "{{ client.address.city }}"
+                    {% endif %}
+                    {% if client.address.state %},
+                        "addressRegion": "{{ client.address.state }}"
+                    {% endif %}
+                    {% if client.address.zip %},
+                        "postalCode": "{{ client.address.zip }}"
+                    {% endif %}
+                    {% if client.address.country %},
+                        "addressCountry": "{{ client.address.country }}"
+                    {% endif %}
+                },
+            {% endif %}
+            {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
+            {% if client.socials %}
+                "sameAs": [{% for platform, url in client.socials %}
+                        {% if not loop.first %},{% endif %}
+                        "{{ url }}"
+                    {% endfor %}]
+            {% endif %}
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+
+<!-- Usage Notes:
+We made this stitch to overlap the section below it, so if there's a patterned texture or image background on the next section below, it will overlap on top of it. Other Stitches like this would have a white gap between the cards and the next section. In order to make Stitches like this work, we need to add a padding top on the section below it to counteract the overlap. Here's the padding top you need to add to the section below this one and all the breakpoints to add them so this design will work with whatever comes after it:
+
+ON MOBILE (360px): add padding-top: (750/16rem); using LESS, or padding-top: calc(750 / 16 * 1rem); if you're using SCSS, or padding-top: 46.875rem; if you're just using vanilla CSS.
+
+ON TABLET (768px): Reset to padding-top: (500/16rem); using LESS, padding-top: calc(500 / 16 * 1rem) for SCSS or padding-top: 31.25rem; for CSS.
+
+ON DESKTOP (1024px): Reset to padding-top: (250/16rem); using LESS, padding-top: calc(250 / 16 * 1rem) for SCSS or padding-top: 15.625rem; for CSS.
+
+Doing this will complete the overlapping "breaking the container" look.
+-->
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1299">
+    <div class="bespoke-container" style="padding-bottom: 2rem;">
+        <div class="bespoke-content">
+            <span class="bespoke-topper">Our Company Cleaning Services</span>
+            <h1 class="bespoke-title">Residential, Commercial & Carpet Cleaning Solutions</h1>
+            <p class="bespoke-text">
+                We offer expert cleaning services, including carpet cleaning, deep cleaning, stain removal, deodorizing, upholstery care, and more. Whether for your home or business, experience a deeper clean with our trusted steam cleaning and full-service cleaning solutions in Edmonton.
+            </p>
+            <a href="tel:587-335-2755" class="bespoke-button-solid">GET A FREE QUOTE</a>
+            <!-- <h4 class="bespoke-title bespoke-subtitle">Our Services</h4> -->
+        </div>
+    </div>
+    <!-- <div class="bespoke-container">
+        <ul class="bespoke-card-group">
+            <li class="bespoke-item">
+                <a href="/services/residential/" class="bespoke-link">
+                    <img aria-hidden="true" decoding="async" src="/assets/svgs/service3.svg" class="bespoke-icon" alt="residential" width="48" height="48" />
+                    <h3 class="bespoke-h3">Residential Cleaning</h3>
+                    <p class="bespoke-item-text">
+                        <ul class="bespoke-ul">
+                            <li class="bespoke-li"><img aria-hidden="true" decoding="async" src="/assets/svgs/check.svg" class="bespoke-check" alt="check" width="20" height="20"/>Move In / Move Out</li>
+                            <li class="bespoke-li"><img aria-hidden="true" decoding="async" src="/assets/svgs/check.svg" class="bespoke-check" alt="check" width="20" height="20"/>Before / After Events</li>
+                            <li class="bespoke-li"><img aria-hidden="true" decoding="async" src="/assets/svgs/check.svg" class="bespoke-check" alt="check" width="20" height="20"/>Senior Living Spaces</li>
+                        </ul>
+                    </p>
+                </a>
+            </li>
+            <li class="bespoke-item">
+                <a href="/services/commercial/" class="bespoke-link">
+                    <img aria-hidden="true" decoding="async" src="/assets/svgs/service2.svg" class="bespoke-icon" alt="residential" width="48" height="48" />
+                    <h3 class="bespoke-h3" class=>Commercial Cleaning</h3>
+                    <p class="bespoke-item-text">
+                        <ul class="bespoke-ul">
+                            <li class="bespoke-li"><img aria-hidden="true" decoding="async" src="/assets/svgs/check.svg" class="bespoke-check" alt="check" width="20" height="20"/>Offices</li>
+                            <li class="bespoke-li"><img aria-hidden="true" decoding="async" src="/assets/svgs/check.svg" class="bespoke-check" alt="check" width="20" height="20"/>Airbnb</li>
+                            <li class="bespoke-li"><img aria-hidden="true" decoding="async" src="/assets/svgs/check.svg" class="bespoke-check" alt="check" width="20" height="20"/>Places of Worship</li>
+                            <li class="bespoke-li"><img aria-hidden="true" decoding="async" src="/assets/svgs/check.svg" class="bespoke-check" alt="check" width="20" height="20"/>Showrooms</li>
+                            <li class="bespoke-li"><img aria-hidden="true" decoding="async" src="/assets/svgs/check.svg" class="bespoke-check" alt="check" width="20" height="20"/>Classrooms</li>
+                            <li class="bespoke-li"><img aria-hidden="true" decoding="async" src="/assets/svgs/check.svg" class="bespoke-check" alt="check" width="20" height="20"/>Schools Daycare</li>
+                        </ul>
+                    </p>
+                </a>
+            </li>
+            <li class="bespoke-item">
+                <a href="/services/carpet/" class="bespoke-link">
+                    <img aria-hidden="true" decoding="async" src="/assets/svgs/service1.svg" class="bespoke-icon" alt="residential" width="48" height="48" />
+                    <h3 class="bespoke-h3">Carpet Cleaning</h3>
+                    <p class="bespoke-item-text">
+                        <ul class="bespoke-ul">
+                            <li class="bespoke-li"><img aria-hidden="true" decoding="async" src="/assets/svgs/check.svg" class="bespoke-check" alt="check" width="20" height="20"/>Steam Cleaning</li>
+                            <li class="bespoke-li"><img aria-hidden="true" decoding="async" src="/assets/svgs/check.svg" class="bespoke-check" alt="check" width="20" height="20"/>Carpet Shampoo</li>
+                            <li class="bespoke-li"><img aria-hidden="true" decoding="async" src="/assets/svgs/check.svg" class="bespoke-check" alt="check" width="20" height="20"/>Deep Cleaning</li>
+                            <li class="bespoke-li"><img aria-hidden="true" decoding="async" src="/assets/svgs/check.svg" class="bespoke-check" alt="check" width="20" height="20"/>Stain Removal</li>
+                            <li class="bespoke-li"><img aria-hidden="true" decoding="async" src="/assets/svgs/check.svg" class="bespoke-check" alt="check" width="20" height="20"/>Deodorizing</li>
+                            <li class="bespoke-li"><img aria-hidden="true" decoding="async" src="/assets/svgs/check.svg" class="bespoke-check" alt="check" width="20" height="20"/>Area Rug & Upholstery Cleaning</li>
+                        </ul>
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </div> -->
+    <!--Floating Arrow-->
+    <!--We wrap it in a picture element wrapper so we can use the wrapper as a box for it to live inside of instead of the section wrapper. This allows us to add overflow:hidden to the wrapper to cut off the graphic at the edge of the screen. If we added overflow:hidden to the section container it would clip the overlapping service cards. So we add this wrapper to allow us to clip only the graphic. -->
+    <picture class="bespoke-floater-wrapper">
+        <img class="bespoke-floater" aria-hidden="true" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/yellow-arrow-reversed.svg" alt="graphic" width="956" height="708">
+    </picture>
+    <!--Background Image, background image added in CSS at 1600px wide for parallax effect-->
+    <picture class="bespoke-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 1023px)" srcset="/assets/images/cleaningHero.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 1024px)" srcset="/assets/images/yeg_cc-hero.webp">
+        <img loading="lazy" decoding="async" src="/assets/images/yeg_cc-hero.webp" alt="buildings" width="1280" height="568">
+    </picture>
+</section>
+<section id="services1" class="w-full h-[100] mt-12 text-center sm:flex-row">
+    <h4 class="bespoke-title bespoke-subtitle">Our Services</h4>
+    <div class="w-3/4 h-[350px] max-w-[300px] flex flex-col mx-auto items-center bg-gray-50 border-[1px] rounded-xl sm:w-2/5" style="border-color: var(--secondary)">
+        <img src="/assets/images/residential.png" class="w-full h-1/2 object-cover">
+        <div class="flex flex-row justify-evenly items-center w-[90%] h-12 rounded-3xl -mt-4" style="background-color: var(--secondary);">
+            <div class="relative w-10 h-10 rounded-full" style="background-color: var(--primary);"></div>
+            <h1 style="color: var(--bodyTextColorWhite)" class="text-center">Residential Cleaning</h1>
+        </div>
+        <div class="relative w-full flex flex-nowrap" style="font-size:clamp(8px,5vw,16px);">
+            <h7> We provide thorough residential cleaning to keep your 
+                home fresh, tidy, and welcoming with spotless spaces and sanitized surfaces.</h7>
+        </div>
+    </div>
+    <div class="w-3/4 h-[350px] max-w-[300px] flex flex-col mx-auto items-center bg-gray-50 border-[1px] rounded-xl sm:w-2/5" style="border-color: var(--secondary)">
+        <img src="/assets/images/residential.png" class="w-full h-1/2 object-cover">
+        <div class="flex flex-row justify-evenly items-center w-[90%] h-12 rounded-3xl -mt-4" style="background-color: var(--secondary);">
+            <div class="relative w-10 h-10 rounded-full" style="background-color: var(--primary);"></div>
+            <h1 style="color: var(--bodyTextColorWhite)" class="text-center">Move-In/Move-Out Cleaning</h1>
+        </div>
+        <div class="relative w-full flex flex-nowrap" style="font-size:clamp(8px,5vw,16px);">
+            <h7> Our move-in/move-out cleaning service ensures a spotless home before or after moving. 
+                We clean every corner to make the space ready for new occupants.</h7>
+        </div>
+    </div>
+    <div class="w-3/4 h-[350px] max-w-[300px] flex flex-col mx-auto items-center bg-gray-50 border-[1px] rounded-xl sm:w-2/5" style="border-color: var(--secondary)">
+        <img src="/assets/images/residential.png" class="w-full h-1/2 object-cover">
+        <div class="flex flex-row justify-evenly items-center w-[90%] h-12 rounded-3xl -mt-4" style="background-color: var(--secondary);">
+            <div class="relative w-10 h-10 rounded-full" style="background-color: var(--primary);"></div>
+            <h1 style="color: var(--bodyTextColorWhite)" class="text-center">Deep Cleaning</h1>
+        </div>
+        <div class="relative w-full flex flex-nowrap" style="font-size:clamp(8px,5vw,16px);">
+            <h7> Our deep cleaning service goes beyond routine cleaning, 
+                targeting neglected areas and offering a thorough scrub to restore your space to its pristine condition.</h7>
+        </div>
+    </div>
+    <div class="w-3/4 h-[350px] max-w-[300px] flex flex-col mx-auto items-center bg-gray-50 border-[1px] rounded-xl sm:w-2/5" style="border-color: var(--secondary)">
+        <img src="/assets/images/residential.png" class="w-full h-1/2 object-cover">
+        <div class="flex flex-row justify-evenly items-center w-[90%] h-12 rounded-3xl -mt-4" style="background-color: var(--secondary);">
+            <div class="relative w-10 h-10 rounded-full" style="background-color: var(--primary);"></div>
+            <h1 style="color: var(--bodyTextColorWhite)" class="text-center">Post-Construction Cleaning</h1>
+        </div>
+        <div class="relative w-full flex flex-nowrap" style="font-size:clamp(8px,5vw,16px);">
+            <h7>We specialize in cleaning up after construction 
+                projects, removing dust, debris, and leftover materials to leave the space ready for use.</h7>
+        </div>
+    </div>
+    <div class="w-3/4 h-[350px] max-w-[300px] flex flex-col mx-auto items-center bg-gray-50 border-[1px] rounded-xl sm:w-2/5" style="border-color: var(--secondary)">
+        <img src="/assets/images/residential.png" class="w-full h-1/2 object-cover">
+        <div class="flex flex-row justify-evenly items-center w-[90%] h-12 rounded-3xl -mt-4" style="background-color: var(--secondary);">
+            <div class="relative w-10 h-10 rounded-full" style="background-color: var(--primary);"></div>
+            <h1 style="color: var(--bodyTextColorWhite)" class="text-center">Window Cleaning</h1>
+        </div>
+        <div class="relative w-full flex flex-nowrap" style="font-size:clamp(8px,5vw,16px);">
+            <h7>Our professional window cleaning service leaves your windows sparkling and 
+                streak-free, improving your view and the overall appearance of your home or office.</h7>
+        </div>
+    </div>
+    <div class="w-3/4 h-[350px] max-w-[300px] flex flex-col mx-auto items-center bg-gray-50 border-[1px] rounded-xl sm:w-2/5" style="border-color: var(--secondary)">
+        <img src="/assets/images/residential.png" class="w-full h-1/2 object-cover">
+        <div class="flex flex-row justify-evenly items-center w-[90%] h-12 rounded-3xl -mt-4" style="background-color: var(--secondary);">
+            <div class="relative w-10 h-10 rounded-full" style="background-color: var(--primary);"></div>
+            <h1 style="color: var(--bodyTextColorWhite)" class="text-center">Eco-Friendly Cleaning</h1>
+        </div>
+        <div class="relative w-full flex flex-nowrap" style="font-size:clamp(8px,5vw,16px);">
+            <h7>We provide green cleaning solutions using environmentally friendly products,
+                 ensuring your home or office stays clean and safe while reducing the environmental impact.</h7>
+        </div>
+    </div>
+    
+</section>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs">
+    <div class="bespoke-container">
+        <!-- Left Image Section -->
+        <div class="bespoke-left">
+            <picture class="bespoke-picture bespoke-picture1">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/about-us-backphoto.webp">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/about-us-backphoto.webp">
+                <img aria-hidden="true" decoding="async" src="{{ client.domain }}/assets/images/about-us-backphoto.webp" alt="cabinets"
+                    loading="lazy" width="400" height="563">
+            </picture>
+            <picture class="bespoke-picture bespoke-picture2">
+                <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/about-us-optimized.webp">
+                <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/about-us-optimized.webp">
+                <img aria-hidden="true" decoding="async" src="{{ client.domain }}/assets/images/about-us-optimized.webp" alt="about us"
+                    loading="lazy" width="400" height="563">
+            </picture>
+        </div>
+        <!-- Right Content Section-->
+        <div class="bespoke-right">
+            <span class="bespoke-topper">About Us</span>
+            <h2 class="bespoke-title">YEG Carpet Cleaning Services</h2>
+            <p class="bespoke-text">
+                We started our small business with a simple vision: to provide honest, reliable, and top-quality cleaning services. What began as a venture with friends and colleagues has grown into a trusted name in Edmonton. As our clientele continues to grow, we’re proud to offer a full range of expert cleaning services.
+            </p>
+            <p class="bespoke-text">
+                From residential and commercial cleaning to carpet cleaning, deep cleaning, stain removal, and upholstery cleaning – we handle it all with a focus on integrity and customer satisfaction. Our dedicated team works hard to ensure every space we clean is fresh, spotless, and inviting. Whether it’s your home or business, we’re here to provide exceptional service you can rely on.
+            </p>
+            <div class="bespoke-flex-group">
+                <p class="bespoke-flex-p">
+                    We believe a clean space isn't just about appearance—it's about comfort, health, and peace of mind.
+                </p>
+                <span class="bespoke-name">Kelvin Canlas & Benneth Esguerra</span>
+                <span class="bespoke-job">Owner-Operator</span>
+                <img class="bespoke-quote-icon" loading="lazy" decoding="async"
+                    src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136"
+                    height="77" />
+            </div>
+            <a href="/about/" class="bespoke-button-solid">More About Us</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--               Before And After               -->
+<!-- ============================================ -->
+
+<section id="gallery-1897">
+    <div class="bespoke-container">
+        <div class="bespoke-content">
+            <div class="bespoke-flex">
+                <span class="bespoke-topper">Our Gallery</span>
+                <h2 class="bespoke-title">Witness The Difference and Our Results</h2>
+            </div>
+            <a class="bespoke-button-solid" href="/services/">View All</a>
+        </div>
+        <!--Gallery-->
+        <div class="bespoke-gallery">
+            <div class="bespoke-item">
+                <p class="bespoke-item-text">Residential Cleaning</p>
+                <div class="bespoke-picture-group">
+                    <picture class="bespoke-picture">
+                        <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/carpet_2-before-optimized.webp">
+                        <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/carpet_2-before-optimized.webp">
+                        <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/carpet_2-before-optimized.webp" alt="carpet 2 before" width="305" height="400">
+                    </picture>
+                    <span class="bespoke-tag">Before</span>
+                </div>
+                <div class="bespoke-picture-group">
+                    <picture class="bespoke-picture">
+                        <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/carpet_2-after-optimized.webp">
+                        <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/carpet_2-after-optimized.webp">
+                        <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/carpet_2-after-optimized.webp" alt="carpet 2 after" width="305" height="400">
+                    </picture>
+                    <span class="bespoke-tag">After</span>
+                </div>
+            </div>
+            <div class="bespoke-item">
+                <p class="bespoke-item-text">Commercial Cleaning</p>
+                <div class="bespoke-picture-group">
+                    <picture class="bespoke-picture">
+                        <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/carpet_3-before-optimized.webp">
+                        <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/carpet_3-before-optimized.webp">
+                        <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/carpet_3-before-optimized.webp" alt="carpet 3 before" width="305" height="400">
+                    </picture>
+                    <span class="bespoke-tag">Before</span>
+                </div>
+                <div class="bespoke-picture-group">
+                    <picture class="bespoke-picture">
+                        <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/carpet_3-after-optimized.webp">
+                        <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/carpet_3-after-optimized.webp">
+                        <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/carpet_3-after-optimized.webp" alt="carpet 3 after" width="305" height="400">
+                    </picture>
+                    <span class="bespoke-tag">After</span>
+                </div>
+            </div>
+            <div class="bespoke-item">
+                <p class="bespoke-item-text">Carpet Cleaning</p>
+                <div class="bespoke-picture-group">
+                    <picture class="bespoke-picture">
+                        <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/carpet_1-before-optimized.webp">
+                        <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/carpet_1-before-optimized.webp">
+                        <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/carpet_1-before-optimized.webp" alt="carpet 1 before" width="305" height="400">
+                    </picture>
+                    <span class="bespoke-tag">Before</span>
+                </div>
+                <div class="bespoke-picture-group">
+                    <picture class="bespoke-picture">
+                        <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/carpet_1-after-optimized.webp">
+                        <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/carpet_1-after-optimized.webp">
+                        <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/carpet_1-after-optimized.webp" alt="carpet 1 after" width="305" height="400">
+                    </picture>
+                    <span class="bespoke-tag">After</span>
+                </div>
+            </div>
+            <div class="bespoke-item">
+                <p class="bespoke-item-text">Carpet Cleaning</p>
+                <div class="bespoke-picture-group">
+                    <picture class="bespoke-picture">
+                        <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/carpet_4-before-optimized.webp">
+                        <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/carpet_4-before-optimized.webp">
+                        <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/carpet_4-before-optimized.webp" alt="carpet 4 before" width="305" height="400">
+                    </picture>
+                    <span class="bespoke-tag">Before</span>
+                </div>
+                <div class="bespoke-picture-group">
+                    <picture class="bespoke-picture">
+                        <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/carpet_4-after-optimized.webp">
+                        <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/carpet_4-after-optimized.webp">
+                        <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/carpet_4-after-optimized.webp" alt="gallery" width="305" height="400">
+                    </picture>
+                    <span class="bespoke-tag">After</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+           
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+
+<section id="cta-51">
+    <div class="bespoke-container">
+        <div class="bespoke-content">
+            <h3 class="bespoke-title">15% discount for new customers!</h3>
+            <a href="tel:587-335-2755" class="bespoke-button-solid">Call Now</a>
+        </div>
+    </div>
+    <!-- Background Image-->
+    <picture class="bespoke-picture">
+        <source media="(max-width: 600px)" srcset="assets/images/cta-bg.webp">
+        <source media="(min-width: 601px)" srcset="assets/images/cta-bg.webp">
+        <img loading="lazy" decoding="async" src="assets/images/cta-bg.webp" alt="cabinets" width="1920" height="1280" aria-hidden="true">
+    </picture>
+</section>
+                                
+                                
+
+<!-- ============================================ -->
+<!--            Extra Content To Rank             -->
+<!-- ============================================ -->
+
+<section id="sbs-r">
+    <div class="bespoke-container">
+        <!-- Left Image Section -->
+        <div class="bespoke-left">
+            <picture class="bespoke-picture bespoke-picture1">
+                <source media="(max-width: 600px)" srcset="/assets/images/carpet-clean-sample.webp">
+                <source media="(min-width: 601px)" srcset="/assets/images/carpet-clean-sample.webp">
+                <img aria-hidden="true" decoding="async" src="/assets/images/carpet-clean-sample.webp" alt="house"
+                    loading="lazy" width="400" height="560">
+            </picture>
+            <picture class="bespoke-picture bespoke-picture2">
+                <source media="(max-width: 600px)" srcset="/assets/images/portfolio/gallery7.webp">
+                <source media="(min-width: 601px)" srcset="/assets/images/portfolio/gallery7.webp">
+                <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/gallery7.webp" alt="cabinets"
+                    loading="lazy" width="400" height="560">
+            </picture>
+        </div>
+        <!-- Right Content Section-->
+        <div class="bespoke-right">
+            <span class="bespoke-topper">Learn More From the Experts</span>
+            <h2 class="bespoke-title">Professional Cleaning Services in Edmonton</h2>
+            <p class="bespoke-text">
+                We provide expert cleaning for homes and businesses, ensuring your space stays spotless and fresh. Our team uses advanced cleaning methods to tackle dirt, stains, and allergens, making your carpets, rugs, and upholstery look like new.
+            </p>
+
+            </p>
+            <p class="bespoke-text">
+                Our services include carpet cleaning, upholstery cleaning, rug treatments, and deodorizing. We focus on removing deep dirt, tough stains, and unwanted odors to create a clean, welcoming environment. Whether for your home or office, our professional cleaning services offer a complete solution to keep your space looking great.
+            </p>
+            <a href="/blog" class="bespoke-button-solid">Read our Blog</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery">
+    <div class="bespoke-container">
+        <span class="bespoke-topper">Our Portfolio</span>
+        <h2 class="bespoke-title">Residential and Commercial Carpet Cleaning</h2>
+        <p class="bespoke-text">We offer Complete Residential and Commercial Cleaning Services, including move-in/move-out cleaning, office cleaning, Airbnb turnover services, and more.</p>
+        <div class="bespoke-image-group">
+            <!-- Row 1-->
+            <div class="bespoke-row bespoke-row-1">
+                <!-- To add more images, copy and paste this row's picture tags here in order from bespoke-picture-1 to bespoke-picture-3 and they will maintain the same layout-->
+                <picture class="bespoke-picture bespoke-picture1">
+                    <source media="(max-width: 600px)" srcset="/assets/images/portfolio/gallery1-optimized.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/portfolio/gallery1-optimized.webp">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/gallery1-optimized.webp" alt="gallery 1"
+                        loading="lazy" width="400" height="560">
+                </picture>
+                <picture class="bespoke-picture bespoke-picture2">
+                    <source media="(max-width: 600px)" srcset="/assets/images/portfolio/gallery4-optimized.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/portfolio/gallery4-optimized.webp">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/gallery4-optimized.webp"
+                        alt="gallery 2" loading="lazy" width="400" height="560">
+                </picture>
+                <picture class="bespoke-picture bespoke-picture3">
+                    <source media="(max-width: 600px)" srcset="/assets/images/portfolio/gallery7-optimized.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/portfolio/gallery7-optimized.webp">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/gallery7-optimized.webp"
+                        alt="gallery 3" loading="lazy" width="400" height="560">
+                </picture>
+            </div>
+            <!-- Row 2 -->
+            <div class="bespoke-row bespoke-row-2">
+                <!-- To add more images, copy and paste this row's picture tags here in order from bespoke-picture-1 to bespoke-picture-3 and they will maintain the same layout-->
+                <picture class="bespoke-picture bespoke-picture1">
+                    <source media="(max-width: 600px)" srcset="/assets/images/portfolio/gallery2-optimized.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/portfolio/gallery2-optimized.webp">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/gallery2-optimized.webp" alt="gallery 4"
+                        loading="lazy" width="400" height="560">
+                </picture>
+                <picture class="bespoke-picture bespoke-picture2">
+                    <source media="(max-width: 600px)" srcset="/assets/images/portfolio/gallery5-optimized.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/portfolio/gallery5-optimized.webp">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/gallery5-optimized.webp"
+                        alt="gallery 5" loading="lazy" width="400" height="560">
+                </picture>
+                <picture class="bespoke-picture bespoke-picture3">
+                    <source media="(max-width: 600px)" srcset="/assets/images/portfolio/gallery8-optimized.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/portfolio/gallery8-optimized.webp">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/gallery8-optimized.webp"
+                        alt="gallery 6" loading="lazy" width="400" height="560">
+                </picture>
+            </div>
+            <!-- Row 3 -->
+            <div class="bespoke-row bespoke-row-3">
+                <!-- To add more images, copy and paste this row's picture tags here in order from bespoke-picture-1 to bespoke-picture-3 and they will maintain the same layout-->
+                <picture class="bespoke-picture bespoke-picture1">
+                    <source media="(max-width: 600px)" srcset="/assets/images/portfolio/gallery3-optimized.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/portfolio/gallery3-optimized.webp">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port3-optimized.webp" alt="gallery 7"
+                        loading="lazy" width="400" height="560">
+                </picture>
+                <picture class="bespoke-picture bespoke-picture2">
+                    <source media="(max-width: 600px)" srcset="/assets/images/portfolio/gallery6-optimized.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/portfolio/gallery6-optimized.webp">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/gallery6-optimized.webp"
+                        alt="gallery 8" loading="lazy" width="400" height="560">
+                </picture>
+                <picture class="bespoke-picture bespoke-picture3">
+                    <source media="(max-width: 600px)" srcset="/assets/images/portfolio/gallery9-optimized.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/portfolio/gallery9-optimized.webp">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/gallery9-optimized.webp"
+                        alt="gallery 9" loading="lazy" width="400" height="560">
+                </picture>
+
+            </div>
+        </div>
+        <a href="/services/" class="bespoke-button-solid">View Full Gallery</a>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Why Choose                  -->
+<!-- ============================================ -->
+
+<section id="why-choose-1550">
+    <div class="bespoke-container">
+    <div id="bespoke-content">
+        <h2 class="bespoke-title">Why Choose Us</h2>
+    </div>                    
+        <ul class="bespoke-card-group">
+            <li class="bespoke-item">
+                <div class="bespoke-icon-wrapper">
+                    <img class="bespoke-icon" loading="lazy" decoding="async"
+                            src="{{ client.domain }}/assets/svgs/satisfaction.svg" alt="icon"
+                            width="48" height="48">
+                </div>
+                <div class="bespoke-flex">
+                    <h2 class="bespoke-h2">Satisfaction Guaranteed</h2>
+                    <p class="bespoke-item-text">
+                        Not 100% happy? Please call and can make it right.
+                    </p>
+                </div>
+            </li>
+            <li class="bespoke-item">
+                <div class="bespoke-icon-wrapper">
+                    <img class="bespoke-icon" loading="lazy" decoding="async"
+                            src="{{ client.domain }}/assets/svgs/local.svg"
+                            alt="icon" width="48" height="48">
+                </div>
+                <div class="bespoke-flex">
+                    <h2 class="bespoke-h2">YEG Local</h2>
+                    <p class="bespoke-item-text">
+                        Proudly Edmonton-owned business. Your trusted neighbor.
+                    </p>
+                </div>
+            </li>
+            <li class="bespoke-item">
+                <div class="bespoke-icon-wrapper">
+                    <img class="bespoke-icon" loading="lazy" decoding="async"
+                            src="{{ client.domain }}/assets/svgs/value.svg" alt="icon"
+                            width="48" height="48">
+                </div>
+                <div class="bespoke-flex">
+                    <h2 class="bespoke-h2">Great Value</h2>
+                    <p class="bespoke-item-text">
+                        We respect your hard-earned money and deliver quality you can count on.
+                    </p>
+                </div>
+            </li>
+            <li class="bespoke-item">
+                <div class="bespoke-icon-wrapper">
+                    <img class="bespoke-icon" loading="lazy" decoding="async"
+                            src="{{ client.domain }}/assets/svgs/outstanding.svg" alt="icon"
+                            width="48" height="48">
+                </div>
+                <div class="bespoke-flex">
+                    <h2 class="bespoke-h2">Outstanding Results</h2>
+                    <p class="bespoke-item-text">
+                        Skilled team, top-notch equipment, and Safe for your family and pets. Check our 5-star Facebook reviews!
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <picture class="bespoke-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/why-choose-us-bg.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/why-choose-us-bg.webp">
+        <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/why-choose-us-bg.webp" alt="texture" width="1920" height="550">
+    </picture>
+</section>
+                                
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-1088">
+    <div class="bespoke-container">
+        <div class="bespoke-content">
+            <span class="bespoke-topper">Testimonials</span>
+            <h2 class="bespoke-title">Words From Our Customers</h2>
+        </div>
+        <ul class="bespoke-card-group">
+            <li class="bespoke-item">
+                <img class="bespoke-image" src="{{ client.domain }}/assets/images/profile.png" alt="profile" width="112" height="112" aria-hidden="true" decoding="async" loading="lazy">
+                <img class="bespoke-icon" src="{{ client.domain }}/assets/images/quotes.png" alt="icon" width="52" height="36" aria-hidden="true" decoding="async" loading="lazy">
+                <p class="bespoke-item-text">
+                    Kelvin and Bennett—10 Years of Carpet Grime Gone! 
+                </p>
+                <p class="bespoke-item-text">
+                    We hadn’t had the carpets cleaned since we moved in...over 10 years ago! With two dogs and a couple of birds in the mix, you can imagine the kind of mess that’s built up. But after putting it off for so long, we finally decided to call in the pros, and we couldn’t be happier we went with Kelvin and Bennett!
+                </p>
+                <div class="bespoke-flex">
+                    <span class="bespoke-name">Renz</span>
+                    <span class="bespoke-desc">November 17, 2024</span>
+                    ⭐⭐⭐⭐⭐
+                </div>
+            </li>
+            <li class="bespoke-item">
+                <img class="bespoke-image" src="{{ client.domain }}/assets/images/profile.png" alt="profile" width="112" height="112" aria-hidden="true" decoding="async" loading="lazy">
+                <img class="bespoke-icon" src="{{ client.domain }}/assets/images/quotes.png" alt="icon" width="52" height="36" aria-hidden="true" decoding="async" loading="lazy">
+                <p class="bespoke-item-text">
+                    I hired Yeg Carpet cleaning to clean my Airbnb carpets. They were very professional, did an excellent job and I would definitely use their service again.
+                </p>
+                <div class="bespoke-flex">
+                    <span class="bespoke-name">Amir</span>
+                    <span class="bespoke-desc">November 6, 2024</span>
+                    ⭐⭐⭐⭐⭐
+                </div>
+            </li>
+            <li class="bespoke-item">
+                <img class="bespoke-image" src="{{ client.domain }}/assets/images/profile.png" alt="profile" width="112" height="112" aria-hidden="true" decoding="async" loading="lazy">
+                <img class="bespoke-icon" src="{{ client.domain }}/assets/images/quotes.png" alt="icon" width="52" height="36" aria-hidden="true" decoding="async" loading="lazy">
+                <p class="bespoke-item-text">
+                    If you are looking for carpet cleaning services, I will definitely recommend this company. YEG CARPET CLEANING. They were very efficient to remove stains, dirt, debris, and allergens from carpets. Reliable, honest and affordable.
+                </p>
+                <div class="bespoke-flex">
+                    <span class="bespoke-name">Relly</span>
+                    <span class="bespoke-desc">November 4, 2024</span>
+                    ⭐⭐⭐⭐⭐
+                </div>
+            </li>
+            <li class="bespoke-item">
+                <img class="bespoke-image" src="{{ client.domain }}/assets/images/profile.png" alt="profile" width="112" height="112" aria-hidden="true" decoding="async" loading="lazy">
+                <img class="bespoke-icon" src="{{ client.domain }}/assets/images/quotes.png" alt="icon" width="52" height="36" aria-hidden="true" decoding="async" loading="lazy">
+                <p class="bespoke-item-text">
+                    The quality of the work was impressive, and I was particularly pleased with the effectiveness of your cleaning machinery. The results exceeded my expectations, leaving my carpets looking refreshed and revitalized.
+                </p>
+                <div class="bespoke-flex">
+                    <span class="bespoke-name">Emilio </span>
+                    <span class="bespoke-desc">November 3, 2024</span>
+                    ⭐⭐⭐⭐⭐
+                </div>
+            </li>
+            <li class="bespoke-item">
+                <img class="bespoke-image" src="{{ client.domain }}/assets/images/profile.png" alt="profile" width="112" height="112" aria-hidden="true" decoding="async" loading="lazy">
+                <img class="bespoke-icon" src="{{ client.domain }}/assets/images/quotes.png" alt="icon" width="52" height="36" aria-hidden="true" decoding="async" loading="lazy">
+                <p class="bespoke-item-text">
+                    Their carpet cleaning exceeded expectations. We are delighted with the removal of the problematic spots and highly recommend their services. Moreover, the price was fairly valued. Mabait pa kausap sila kabayan.
+                </p>
+                <div class="bespoke-flex">
+                    <span class="bespoke-name">Riahn </span>
+                    <span class="bespoke-desc">November 3, 2024</span>
+                    ⭐⭐⭐⭐⭐
+                </div>
+            </li>
+            <li class="bespoke-item">
+                <img class="bespoke-image" src="{{ client.domain }}/assets/images/profile.png" alt="profile" width="112" height="112" aria-hidden="true" decoding="async" loading="lazy">
+                <img class="bespoke-icon" src="{{ client.domain }}/assets/images/quotes.png" alt="icon" width="52" height="36" aria-hidden="true" decoding="async" loading="lazy">
+                <p class="bespoke-item-text">
+                    Recommended their company!
+                </p>
+                <div class="bespoke-flex">
+                    <span class="bespoke-name">Mhel </span>
+                    <span class="bespoke-desc">November 3, 2024</span>
+                    ⭐⭐⭐⭐⭐
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+
+{% include 'components/cta.html' %}
+{% endblock %}

@@ -1,0 +1,407 @@
+/* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
+
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbs {
+        padding: var(--sectionPadding);
+        padding-top: 15rem;
+
+        .bespoke-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            max-width: (1280/16rem);
+            width: 100%;
+            row-gap: (40/16rem);
+        }
+
+        .bespoke-left {
+            position: relative;
+            height: (636/16em);
+            /* using ems so we can use font size to scale the whole section */
+            width: (631/16em);
+            /* scaling the font size with the view width */
+            font-size: ~"min(2.31vw, 0.7em)";
+        }
+
+        .bespoke-picture {
+            position: absolute;
+            display: block;
+            border-radius: (24/16em);
+            /* clips img tag corners */
+            overflow: hidden;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                /* makes image act like a background image */
+                object-fit: cover;
+            }
+        }
+
+        .bespoke-picture1 {
+            top: 0;
+            left: 0;
+            height: (581/16em);
+            width: (522/16em);
+        }
+
+        .bespoke-picture2 {
+            bottom: 0;
+            right: 0;
+            /* 6px - 12px */
+            border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
+            background-color: #fff;
+            height: (400/16em);
+            width: (414/16em);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
+        }
+
+        .bespoke-right {
+            margin: auto;
+            max-width: (542/16rem);
+        }
+
+        .bespoke-topper {
+            margin-bottom: (4/16rem);
+            text-align: left;
+        }
+
+        .bespoke-title {
+            max-width: (800/16rem);
+            text-align: left;
+        }
+
+        .bespoke-text {
+            margin-bottom: (16/16rem);
+            max-width: (750/16rem);
+            text-align: left;
+
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .bespoke-flex-group {
+            position: relative;
+            border-radius: (16/16rem);
+            background-color: #f7f7f7;
+            /* 16px - 32px */
+            padding: clamp(1rem, 3vw, 2rem);
+        }
+
+        .bespoke-flex-p {
+            margin: 0 0 (16/16rem);
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            color: #353535;
+        }
+
+        .bespoke-name {
+            display: block;
+            margin: 0 0 (4/16rem);
+            text-transform: uppercase;
+            font-size: (16/16rem);
+            line-height: 1.2em;
+            font-weight: bold;
+            color: var(--headerColor);
+        }
+
+        .bespoke-job {
+            display: block;
+            font-size: (14/16rem);
+            line-height: 1.5em;
+            color: #353535;
+        }
+
+        .bespoke-quote-icon {
+            position: absolute;
+            bottom: (0/16rem);
+            /* 16px - 32px */
+            right: clamp(1rem, 4vw, 2rem);
+            height: auto;
+            /* 60px - 136px */
+            width: clamp(3.75rem, 10vw, 8.5rem);
+        }
+
+        .bespoke-button-solid {
+            margin-top: (32/16rem);
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #sbs {
+
+        .bespoke-container {
+            flex-flow: row;
+            justify-content: space-between;
+            gap: (52/16rem);
+        }
+
+        .bespoke-left {
+            font-size: ~"min(1.2vw, 1em)";
+            flex: none;
+        }
+
+        .bespoke-right {
+            margin: 0;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #sbs {
+            .bespoke-left {
+                &:before,
+                &:after {
+                    background: var(--accent);
+                }
+            }
+
+            .bespoke-picture2 {
+                /* 6px - 12px */
+                border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
+                background-color: var(--dark);
+            }
+
+            .bespoke-topper {
+                color: var(--primaryLight);
+            }
+
+            .bespoke-title,
+            .bespoke-text,
+            .bespoke-h3,
+            .bespoke-flex-p,
+            .bespoke-name {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .bespoke-flex-group {
+                background-color: var(--accent);
+            }
+
+            .bespoke-job {
+                opacity: 0.8;
+                color: var(--bodyTextColorWhite);
+            }
+
+            .bespoke-quote-icon {
+                opacity: 0.2;
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbs-r {
+        padding: var(--sectionPadding);
+
+        .bespoke-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            max-width: (1280/16rem);
+            width: 100%;
+            row-gap: (40/16rem);
+        }
+
+        .bespoke-left {
+            position: relative;
+            height: (636/16em);
+            /* using ems so we can use font size to scale the whole section */
+            width: (631/16em);
+            /* scaling the font size with the view width */
+            font-size: ~"min(2.31vw, 0.7em)";
+        }
+
+        .bespoke-picture {
+            position: absolute;
+            display: block;
+            border-radius: (24/16em);
+            /* clips img tag corners */
+            overflow: hidden;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                /* makes image act like a background image */
+                object-fit: cover;
+            }
+        }
+
+        .bespoke-picture1 {
+            top: 0;
+            right: 0;
+            height: (581/16em);
+            width: (522/16em);
+        }
+
+        .bespoke-picture2 {
+            bottom: 0;
+            left: 0;
+            /* 6px - 12px */
+            border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
+            background-color: #fff;
+            height: (400/16em);
+            width: (414/16em);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
+        }
+
+        .bespoke-right {
+            margin: auto;
+            max-width: (542/16rem);
+        }
+
+        .bespoke-topper {
+            margin-bottom: (4/16rem);
+            text-align: left;
+        }
+
+        .bespoke-title {
+            max-width: (800/16rem);
+            text-align: left;
+        }
+
+        .bespoke-text {
+            margin-bottom: (16/16rem);
+            max-width: (750/16rem);
+            text-align: left;
+            &:last-of-type {
+                margin-bottom: (32/16rem);
+            }
+        }
+
+        .bespoke-flex-group {
+            position: relative;
+            border-radius: (16/16rem);
+            background-color: #f7f7f7;
+            /* 16px - 32px */
+            padding: clamp(1rem, 3vw, 2rem);
+        }
+
+        .bespoke-flex-p {
+            margin: 0 0 (16/16rem);
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            color: #353535;
+        }
+
+        .bespoke-name {
+            display: block;
+            margin: 0 0 (4/16rem);
+            text-transform: uppercase;
+            font-size: (16/16rem);
+            line-height: 1.2em;
+            font-weight: bold;
+            color: var(--headerColor);
+        }
+
+        .bespoke-job {
+            display: block;
+            font-size: (14/16rem);
+            line-height: 1.5em;
+            color: #353535;
+        }
+
+        .bespoke-quote-icon {
+            position: absolute;
+            bottom: (0/16rem);
+            /* 16px - 32px */
+            right: clamp(1rem, 4vw, 2rem);
+            height: auto;
+            /* 60px - 136px */
+            width: clamp(3.75rem, 10vw, 8.5rem);
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #sbs-r {
+        .bespoke-container {
+            flex-flow: row;
+            justify-content: space-between;
+            gap: (52/16rem);
+        }
+
+        .bespoke-left {
+            /* sends it to the right */
+            order: 2;
+            font-size: ~"min(1.2vw, 1em)";
+            flex: none;
+        }
+
+        .bespoke-right {
+            margin: 0;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #sbs-r {
+            .bespoke-left {
+                &:before,
+                &:after {
+                    background: var(--accent);
+                }
+            }
+
+            .bespoke-picture2 {
+                /* 6px - 12px */
+                border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
+                background-color: var(--dark);
+            }
+
+            .bespoke-topper {
+                color: var(--primaryLight);
+            }
+
+            .bespoke-title,
+            .bespoke-text,
+            .bespoke-h3,
+            .bespoke-flex-p,
+            .bespoke-name {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .bespoke-flex-group {
+                background-color: var(--accent);
+            }
+
+            .bespoke-job {
+                opacity: 0.8;
+                color: var(--bodyTextColorWhite);
+            }
+
+            .bespoke-quote-icon {
+                opacity: 0.2;
+            }
+        }
+    }
+}
+                             
