@@ -17,6 +17,7 @@ eleventyNavigation:
 <link rel="stylesheet" href="/assets/css/local.css" />
 <link rel="stylesheet" href="/assets/css/critical.css" />
 <script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <!-- Script for Netlify Identity -->
 <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -97,7 +98,7 @@ Doing this will complete the overlapping "breaking the container" look.
     <div class="bespoke-container" style="padding-bottom: 2rem;">
         <div class="bespoke-content">
             <span class="bespoke-topper">Our Company Cleaning Services</span>
-            <h1 class="bespoke-title">Residential, Commercial & Carpet Cleaning Solutions</h1>
+            <h1 class="bespoke-title">Bringing Shine to Every Space, One Clean at a Time!</h1>
             <p class="bespoke-text">
                 We offer expert cleaning services, including carpet cleaning, deep cleaning, stain removal, deodorizing, upholstery care, and more. Whether for your home or business, experience a deeper clean with our trusted steam cleaning and full-service cleaning solutions in Edmonton.
             </p>
@@ -241,6 +242,7 @@ Doing this will complete the overlapping "breaking the container" look.
             </div>
         </div>
     </div>
+    <a href="/services/" class="bespoke-button-solid mt-12 mb-20" style="color: var(--secondary);">View More Services</a>
 </section>
 
 <!-- ============================================ -->
@@ -413,7 +415,7 @@ Doing this will complete the overlapping "breaking the container" look.
            
 <section id="beforeAfter" class="mt-20 flex flex-col w-5/6 items-center justify-center mx-auto gap-y-8 pb-12">
     <h4 class="bespoke-title bespoke-subtitle" style="color: var(--secondary);">Gallery</h4>
-    <h4 style="color:var(--bodyTextColor);" class="text-xl" >"Click the Photo to see our Before and After"</h4>
+    <h4 style="color:var(--bodyTextColor);" class="text-xl -mt-12" >"Click the Photo to see our Before and After"</h4>
     <div class="flex flex-col w-full items-center justify-center mx-auto gap-y-8 lg:flex-row lg:flex-wrap lg:w-3/4">
         <div class=" flex justify-center relative mx-auto max-w-[500px] cursor-pointer lg:max-w-[300px] xl:max-w-[400px]" onclick="swapImage('before1', 'after1')">
             <img src="assets/images/b1.png" id="before1" >
@@ -432,6 +434,7 @@ Doing this will complete the overlapping "breaking the container" look.
             <img src="assets/images/a4.png" id="after4" class="w-full h-full rounded-xl absolute top-0 left-0 opacity-0 transition-opacity duration-300" >
         </div>
     </div>
+    <a href="/gallery/" class="bespoke-button-solid" style="color: var(--secondary);">See More</a>
 </section>
 <script>
     function swapImage(beforeId, afterId) {
@@ -451,20 +454,20 @@ Doing this will complete the overlapping "breaking the container" look.
 <!--                     CTA                      -->
 <!-- ============================================ -->
 
-<section id="cta-51">
+<!-- <section id="cta-51">
     <div class="bespoke-container">
         <div class="bespoke-content">
             <h3 class="bespoke-title">15% discount for new customers!</h3>
             <a href="tel:587-335-2755" class="bespoke-button-solid">Call Now</a>
         </div>
-    </div>
+    </div> -->
     <!-- Background Image-->
-    <picture class="bespoke-picture">
+    <!-- <picture class="bespoke-picture">
         <source media="(max-width: 600px)" srcset="assets/images/cta-bg.webp">
         <source media="(min-width: 601px)" srcset="assets/images/cta-bg.webp">
         <img loading="lazy" decoding="async" src="assets/images/cta-bg.webp" alt="cabinets" width="1920" height="1280" aria-hidden="true">
     </picture>
-</section>
+</section> -->
                                 
                                 
 
@@ -472,10 +475,10 @@ Doing this will complete the overlapping "breaking the container" look.
 <!--            Extra Content To Rank             -->
 <!-- ============================================ -->
 
-<section id="sbs-r">
-    <div class="bespoke-container">
+<!-- <section id="sbs-r">
+    <div class="bespoke-container"> -->
         <!-- Left Image Section -->
-        <div class="bespoke-left">
+        <!-- <div class="bespoke-left">
             <picture class="bespoke-picture bespoke-picture1">
                 <source media="(max-width: 600px)" srcset="/assets/images/carpet-clean-sample.webp">
                 <source media="(min-width: 601px)" srcset="/assets/images/carpet-clean-sample.webp">
@@ -488,9 +491,9 @@ Doing this will complete the overlapping "breaking the container" look.
                 <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/gallery7.webp" alt="cabinets"
                     loading="lazy" width="400" height="560">
             </picture>
-        </div>
+        </div> -->
         <!-- Right Content Section-->
-        <div class="bespoke-right">
+        <!-- <div class="bespoke-right">
             <span class="bespoke-topper">Learn More From the Experts</span>
             <h2 class="bespoke-title">Professional Cleaning Services in Edmonton</h2>
             <p class="bespoke-text">
@@ -504,22 +507,74 @@ Doing this will complete the overlapping "breaking the container" look.
             <a href="/blog" class="bespoke-button-solid">Read our Blog</a>
         </div>
     </div>
+</section> -->
+<section id="blog" class="mx-auto text-center flex flex-col items-center w-full pt-12 pb-12" style="text-align: justify;background-image:url('/assets/images/aboutBg.png');opacity: 1;">
+    <h4 class="bespoke-title bespoke-subtitle" style="color: var(--primary);">Blog</h4>
+    <div class="relative w-[70vw] min-w-[100px] h-[50vw] max-h-400px min-h-[100px] max-w-400px md:w-[500px] md:h-[300px] overflow-hidden rounded-lg shadow-lg">
+        <!-- Images -->
+        <div class="absolute w-full h-full transition-opacity duration-1000 opacity-100" id="slide1">
+            <img src="assets/images/cs1.png" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute w-full h-full transition-opacity duration-1000 opacity-0" id="slide2">
+            <img src="assets/images/cs2.png" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute w-full h-full transition-opacity duration-1000 opacity-0" id="slide3">
+            <img src="assets/images/cs3.png" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute w-full h-full transition-opacity duration-1000 opacity-0" id="slide3">
+            <img src="assets/images/cs4.png" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full" onclick="prevSlide()">❮</button>
+        <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full" onclick="nextSlide()">❯</button>
+    </div>
+    <h4 style="color:var(--bodyTextColorWhite);" class="w-3/4 mt-12" >       We provide expert cleaning solutions for homes and businesses, 
+        ensuring a spotless and refreshed environment. Our team uses advanced techniques and high-quality products to tackle dirt, 
+        dust, and grime, delivering a thorough and efficient clean.Our services include residential and commercial cleaning, 
+        deep cleaning, sanitization, and maintenance. We focus on creating a clean, healthy, and welcoming space for you.
+         Whether for your home, office, or any establishment, our professional cleaning services offer a reliable solution 
+         to maintain cleanliness and comfort.</h4>
+    <a href="/blog/" class="bespoke-button-solid mt-12" style="color: var(--secondary);">Go to Blog</a>
 </section>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll("[id^=slide]");
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.opacity = i === index ? "1" : "0";
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000); // Auto-change every 3 seconds
+</script>
 
 <!-- ============================================ -->
 <!--                   Gallery                    -->
 <!-- ============================================ -->
 
-<section id="gallery">
+<!-- <section id="gallery">
     <div class="bespoke-container">
         <span class="bespoke-topper">Our Portfolio</span>
         <h2 class="bespoke-title">Residential and Commercial Carpet Cleaning</h2>
         <p class="bespoke-text">We offer Complete Residential and Commercial Cleaning Services, including move-in/move-out cleaning, office cleaning, Airbnb turnover services, and more.</p>
-        <div class="bespoke-image-group">
+        <div class="bespoke-image-group"> -->
             <!-- Row 1-->
-            <div class="bespoke-row bespoke-row-1">
+            <!-- <div class="bespoke-row bespoke-row-1"> -->
                 <!-- To add more images, copy and paste this row's picture tags here in order from bespoke-picture-1 to bespoke-picture-3 and they will maintain the same layout-->
-                <picture class="bespoke-picture bespoke-picture1">
+                <!-- <picture class="bespoke-picture bespoke-picture1">
                     <source media="(max-width: 600px)" srcset="/assets/images/portfolio/gallery1-optimized.webp">
                     <source media="(min-width: 601px)" srcset="/assets/images/portfolio/gallery1-optimized.webp">
                     <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/gallery1-optimized.webp" alt="gallery 1"
@@ -537,11 +592,11 @@ Doing this will complete the overlapping "breaking the container" look.
                     <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/gallery7-optimized.webp"
                         alt="gallery 3" loading="lazy" width="400" height="560">
                 </picture>
-            </div>
+            </div> -->
             <!-- Row 2 -->
-            <div class="bespoke-row bespoke-row-2">
+            <!-- <div class="bespoke-row bespoke-row-2"> -->
                 <!-- To add more images, copy and paste this row's picture tags here in order from bespoke-picture-1 to bespoke-picture-3 and they will maintain the same layout-->
-                <picture class="bespoke-picture bespoke-picture1">
+                <!-- <picture class="bespoke-picture bespoke-picture1">
                     <source media="(max-width: 600px)" srcset="/assets/images/portfolio/gallery2-optimized.webp">
                     <source media="(min-width: 601px)" srcset="/assets/images/portfolio/gallery2-optimized.webp">
                     <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/gallery2-optimized.webp" alt="gallery 4"
@@ -559,11 +614,11 @@ Doing this will complete the overlapping "breaking the container" look.
                     <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/gallery8-optimized.webp"
                         alt="gallery 6" loading="lazy" width="400" height="560">
                 </picture>
-            </div>
+            </div> -->
             <!-- Row 3 -->
-            <div class="bespoke-row bespoke-row-3">
+            <!-- <div class="bespoke-row bespoke-row-3"> -->
                 <!-- To add more images, copy and paste this row's picture tags here in order from bespoke-picture-1 to bespoke-picture-3 and they will maintain the same layout-->
-                <picture class="bespoke-picture bespoke-picture1">
+                <!-- <picture class="bespoke-picture bespoke-picture1">
                     <source media="(max-width: 600px)" srcset="/assets/images/portfolio/gallery3-optimized.webp">
                     <source media="(min-width: 601px)" srcset="/assets/images/portfolio/gallery3-optimized.webp">
                     <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port3-optimized.webp" alt="gallery 7"
@@ -586,13 +641,71 @@ Doing this will complete the overlapping "breaking the container" look.
         </div>
         <a href="/services/" class="bespoke-button-solid">View Full Gallery</a>
     </div>
-</section>
+</section> -->
+<section id="portfolio" class="w-full mx-auto text-center mt-20 mb-20">
+    <h4 class="bespoke-title bespoke-subtitle mx-auto" style="color: var(--secondary);">Portfolio</h4>
+    <div class="flex flex-col items-center">
+        <!-- Large Displayed Image -->
+        <div class="w-[80vw] max-w-[500px] h-[300px]  bg-gray-300 rounded-lg overflow-hidden lg:hidden">
+            <img id="mainImage" src="assets/images/cs1.png" class="w-full h-full object-cover">
+        </div>
 
+        <!-- Thumbnail Navigation with Arrows -->
+        <div class="flex items-center mt-4 w-[80vw] max-w-[500px] lg:max-w-[80vw]">
+            <!-- Left Arrow -->
+            <button id="prevBtn" class="p-2 bg-gray-300 rounded-full mx-2 lg:hidden" style="background-color: var(--primary);">&lt;</button>
+
+            <!-- Scrollable Thumbnails -->
+            <div id="thumbnailContainer" class="overflow-hidden lg:overflow-visible ">
+                <div id="thumbnailWrapper" class="flex gap-2 transition-transform duration-300 lg:w-[80vw] lg:flex lg:flex-row lg:flex-wrap lg:justify-center">
+                    <img src="assets/images/cs1.png" class="thumbnail w-16 h-16 rounded cursor-pointer border-2 border-transparent hover:border-gray-500 lg:w-96 lg:h-96" onclick="changeImage(this)">
+                    <img src="assets/images/cs2.png" class="thumbnail w-16 h-16 rounded cursor-pointer border-2 border-transparent hover:border-gray-500 lg:w-96 lg:h-96" onclick="changeImage(this)">
+                    <img src="assets/images/cs3.png" class="thumbnail w-16 h-16 rounded cursor-pointer border-2 border-transparent hover:border-gray-500 lg:w-96 lg:h-96" onclick="changeImage(this)">
+                    <img src="assets/images/cs4.png" class="thumbnail w-16 h-16 rounded cursor-pointer border-2 border-transparent hover:border-gray-500 lg:w-96 lg:h-96" onclick="changeImage(this)">
+                    <img src="assets/images/a1.png" class="thumbnail w-16 h-16 rounded cursor-pointer border-2 border-transparent hover:border-gray-500 lg:w-96 lg:h-96" onclick="changeImage(this)">
+                    <img src="assets/images/a2.png" class="thumbnail w-16 h-16 rounded cursor-pointer border-2 border-transparent hover:border-gray-500 lg:w-96 lg:h-96" onclick="changeImage(this)">
+                    <img src="assets/images/a3.png" class="thumbnail w-16 h-16 rounded cursor-pointer border-2 border-transparent hover:border-gray-500 lg:w-96 lg:h-96" onclick="changeImage(this)">
+                    <img src="assets/images/b3.png" class="thumbnail w-16 h-16 rounded cursor-pointer border-2 border-transparent hover:border-gray-500 lg:w-96 lg:h-96" onclick="changeImage(this)">
+                </div>
+            </div>
+
+            <!-- Right Arrow -->
+            <button id="nextBtn" class="p-2 bg-gray-300 rounded-full mx-2 lg:hidden" style="background-color: var(--primary);">&gt;</button>
+        </div>
+    </div>
+    <a href="/portfolio/" class="bespoke-button-solid mt-12" style="color: var(--secondary);">Go to Porfolio</a>
+    <script>
+        function changeImage(thumbnail) {
+            document.getElementById("mainImage").src = thumbnail.src;
+        }
+
+        const thumbnailWrapper = document.getElementById("thumbnailWrapper");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+
+        let scrollAmount = 0;
+        const scrollStep = 100; // Amount to scroll on arrow click
+
+        prevBtn.addEventListener("click", () => {
+            scrollAmount -= scrollStep;
+            if (scrollAmount < 0) scrollAmount = 0;
+            thumbnailWrapper.style.transform = `translateX(-${scrollAmount}px)`;
+        });
+
+        nextBtn.addEventListener("click", () => {
+            scrollAmount += scrollStep;
+            if (scrollAmount > thumbnailWrapper.scrollWidth - thumbnailWrapper.clientWidth) {
+                scrollAmount = thumbnailWrapper.scrollWidth - thumbnailWrapper.clientWidth;
+            }
+            thumbnailWrapper.style.transform = `translateX(-${scrollAmount}px)`;
+        });
+    </script>
+</section>
 <!-- ============================================ -->
 <!--                  Why Choose                  -->
 <!-- ============================================ -->
 
-<section id="why-choose-1550">
+<!-- <section id="why-choose-1550">
     <div class="bespoke-container">
     <div id="bespoke-content">
         <h2 class="bespoke-title">Why Choose Us</h2>
@@ -652,21 +765,65 @@ Doing this will complete the overlapping "breaking the container" look.
             </li>
         </ul>
     </div>
-    <picture class="bespoke-background">
+    <picture class="bespoke-background"> -->
         <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/why-choose-us-bg.webp">
+        <!-- <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/why-choose-us-bg.webp"> -->
         <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/why-choose-us-bg.webp">
+        <!-- <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/why-choose-us-bg.webp">
         <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/why-choose-us-bg.webp" alt="texture" width="1920" height="550">
     </picture>
 </section>
-                                
+                                 -->
+<section id="whyChooseUs" class="w-full text-center mx-auto pt-12 pb-12 bg-cover bg-center" style="background-image:url('/assets/images/aboutBg.png');">
+    <h4 class="bespoke-title bespoke-subtitle mx-auto text-white" style="color: var(--primary);">Why Choose Us?</h4>
+    <h4 style="color:var(--bodyTextColorWhite);" class="w-full sm:w-3/4 mt-4 text-center mx-auto">At our cleaning company, we prioritize quality, 
+        reliability, and customer satisfaction. Here’s why clients choose us:</h4>
+    <div class="flex flex-col items-center gap-y-4 mx-auto mt-8 md:w-4/5 md:flex md:flex-row md:flex-wrap md:gap-4 md:justify-center">
+
+        <!-- Card 1 -->
+        <div class="w-3/4 max-w-[300px] sm:w-2/5 md:w-2/5 bg-white shadow-md rounded-2xl p-6 flex flex-col items-start gap-4 justify-center md:h-60 lg:max-w-[400px]">
+            <span class="material-icons text-4xl" style="color:var(--primary)">groups</span>
+            <h3 class="text-xl font-semibold">Experienced Team</h3>
+            <p class="text-sm text-gray-600">Our trained professionals bring years of experience and attention to detail to every job.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="w-3/4 max-w-[300px]  sm:w-2/5 md:w-2/5 bg-white shadow-md rounded-2xl p-6 flex flex-col items-start gap-4 justify-center md:h-60 lg:max-w-[400px]">
+            <span class="material-icons text-4xl text-green-500" style="color:var(--primary)">tune</span>
+            <h3 class="text-xl font-semibold">Customized Cleaning</h3>
+            <p class="text-sm text-gray-600">We tailor our services to fit your specific needs and schedule.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="w-3/4 max-w-[300px]  sm:w-2/5 md:w-2/5 bg-white shadow-md rounded-2xl p-6 flex flex-col items-start gap-4 justify-center md:h-60 lg:max-w-[400px]">
+            <span class="material-icons text-4xl text-yellow-500" style="color:var(--primary)">verified_user</span>
+            <h3 class="text-xl font-semibold">Trusted & Reliable</h3>
+            <p class="text-sm text-gray-600">Punctual, dependable, and respectful of your space.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="w-3/4 max-w-[300px]  sm:w-2/5 md:w-2/5 bg-white shadow-md rounded-2xl p-6 flex flex-col items-start gap-4 justify-center md:h-60 lg:max-w-[400px]">
+            <span class="material-icons text-4xl text-emerald-500" style="color:var(--primary)">eco</span>
+            <h3 class="text-xl font-semibold">Eco-Friendly Products</h3>
+            <p class="text-sm text-gray-600">We use safe and effective cleaning products for a healthier environment.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="w-3/4 max-w-[300px]  sm:w-2/5 md:w-2/5 bg-white shadow-md rounded-2xl p-6 flex flex-col items-start gap-4 justify-center md:h-60 lg:max-w-[400px]">
+            <span class="material-icons text-4xl text-purple-500" style="color:var(--primary)">attach_money</span>
+            <h3 class="text-xl font-semibold">Affordable Rates</h3>
+            <p class="text-sm text-gray-600">High-quality cleaning services at competitive prices.</p>
+        </div>
+
+    </div>
+    <a href="/services/" class="bespoke-button-solid mt-12 text-white px-6 py-3 rounded-md bg-primary hover:bg-secondary transition-all" style="color: var(--secondary);"> Services</a>
+</section>
 
 <!-- ============================================ -->
 <!--                   Reviews                    -->
 <!-- ============================================ -->
 
-<section id="reviews-1088">
+<!-- <section id="reviews-1088">
     <div class="bespoke-container">
         <div class="bespoke-content">
             <span class="bespoke-topper">Testimonials</span>
@@ -750,8 +907,105 @@ Doing this will complete the overlapping "breaking the container" look.
             </li>
         </ul>
     </div>
-</section>
-                                
+</section> -->
+<section id="reviews" class="flex flex-col items-center mt-12 pb-8 pt-8">
+    <h4 class="bespoke-title bespoke-subtitle mx-auto" style="color: var(--secondary);">Reviews</h4>
+    <div class="flex flex-col sm:flex-row sm:gap-8 sm:flex-wrap justify-center items-center">
+
+        <!-- Review 1 -->
+        <div class="p-6 rounded-xl shadow-md w-[80vw] min-w-[100px] max-w-[300px] mb-6 md:mb-0 lg:max-w-[400px]">
+            <div class="" style="background-color: var(--secondary);">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="assets/images/reviewer.png" alt="Sarah T." class="w-16 h-16 rounded-full border-2 border-primary">
+                </div>
+                <h3 class="font-semibold text-xl" style="color: var(--bodyTextColorWhite);">Sarah T.</h3>
+                <div class="text-yellow-500 mb-2">
+                    ⭐️⭐️⭐️⭐️⭐️
+                </div>
+            </div>
+            <p class="text-gray-600 mb-4">"The cleaning team did an amazing job on my house! They were thorough, professional, and really paid attention to every detail. My home has never looked better, and I appreciate their eco-friendly products. Highly recommend!"</p>
+            <p class="text-sm text-gray-500">Date: March 25, 2025</p>
+        </div>
+        
+        <!-- Review 2 -->
+        <div class="p-6 rounded-xl shadow-md w-[80vw] min-w-[100px] max-w-[300px] mb-6 md:mb-0 lg:max-w-[400px]">
+            <div class="" style="background-color: var(--secondary);">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="assets/images/reviewer.png" alt="Mark L." class="w-16 h-16 rounded-full border-2 border-primary">
+                </div>
+                <h3 class="font-semibold text-xl" style="color: var(--bodyTextColorWhite);">Mark L.</h3>
+                <div class="text-yellow-500 mb-2">
+                    ⭐️⭐️⭐️⭐️⭐️
+                </div>
+            </div>
+            <p class="text-gray-600 mb-4">"I hired this cleaning service for my office, and they exceeded my expectations. The team was punctual, friendly, and made sure everything was spotless. It's great knowing we have a clean and safe environment for our employees."</p>
+            <p class="text-sm text-gray-500">Date: February 18, 2025</p>
+        </div>
+        
+        <!-- Review 3 -->
+        <div class="p-6 rounded-xl shadow-md w-[80vw] min-w-[100px] max-w-[300px] mb-6 md:mb-0 lg:max-w-[400px]">
+            <div class="" style="background-color: var(--secondary);">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="assets/images/reviewer.png" alt="Linda P." class="w-16 h-16 rounded-full border-2 border-primary">
+                </div>
+                <h3 class="font-semibold text-xl" style="color: var(--bodyTextColorWhite);">Linda P.</h3>
+                <div class="text-yellow-500 mb-2">
+                    ⭐️⭐️⭐️⭐️⭐️
+                </div>
+            </div>
+            <p class="text-gray-600 mb-4">"Fantastic service! I’ve used many cleaning services in the past, but none have been as reliable and efficient as this one. They did a deep clean on my carpets and upholstery, and everything looks like new again!"</p>
+            <p class="text-sm text-gray-500">Date: January 10, 2025</p>
+        </div>
+        
+        <!-- Review 4 -->
+        <div class="p-6 rounded-xl shadow-md w-[80vw] min-w-[100px] max-w-[300px] mb-6 md:mb-0 lg:max-w-[400px]">
+            <div class="" style="background-color: var(--secondary);">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="assets/images/reviewer.png" alt="Alex M." class="w-16 h-16 rounded-full border-2 border-primary">
+                </div>
+                <h3 class="font-semibold text-xl" style="color: var(--bodyTextColorWhite);">Alex M.</h3>
+                <div class="text-yellow-500 mb-2">
+                    ⭐️⭐️⭐️⭐️⭐️
+                </div>
+            </div>
+            <p class="text-gray-600 mb-4">"I’m so impressed with how clean my home feels after the team came in. The staff was professional and friendly, and they made sure everything was cleaned exactly how I wanted. I’ll definitely be using their services regularly."</p>
+            <p class="text-sm text-gray-500">Date: December 5, 2024</p>
+        </div>
+        
+        <!-- Review 5 -->
+        <div class="p-6 rounded-xl shadow-md w-[80vw] min-w-[100px] max-w-[300px] mb-6 md:mb-0 lg:max-w-[400px]">
+            <div class="" style="background-color: var(--secondary);">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="assets/images/reviewer.png" alt="Emily D." class="w-16 h-16 rounded-full border-2 border-primary">
+                </div>
+                <h3 class="font-semibold text-xl" style="color: var(--bodyTextColorWhite);">Emily D.</h3>
+                <div class="text-yellow-500 mb-2">
+                    ⭐️⭐️⭐️⭐️⭐️
+                </div>
+            </div>
+            <p class="text-gray-600 mb-4">"I had a last-minute request for a cleaning before a family gathering, and they accommodated me right away. They did an outstanding job, and my home was sparkling! Will definitely hire them again for my next event."</p>
+            <p class="text-sm text-gray-500">Date: November 22, 2024</p>
+        </div>
+        
+        <!-- Review 6 -->
+        <div class="p-6 rounded-xl shadow-md w-[80vw] min-w-[100px] max-w-[300px] mb-6 md:mb-0 lg:max-w-[400px]">
+            <div class="" style="background-color: var(--secondary);">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="assets/images/reviewer.png" alt="James F." class="w-16 h-16 rounded-full border-2 border-primary">
+                </div>
+                <h3 class="font-semibold text-xl" style="color: var(--bodyTextColorWhite);">James F.</h3>
+                <div class="text-yellow-500 mb-2">
+                    ⭐️⭐️⭐️⭐️⭐️
+                </div>
+            </div>
+            <p class="text-gray-600 mb-4">"The team did an excellent job cleaning our office space. It’s clear that they take pride in their work. The staff is courteous and hardworking. We’ve been using them for months, and I couldn't be happier with the results!"</p>
+            <p class="text-sm text-gray-500">Date: October 15, 2024</p>
+        </div>
+        
+        
+    </div>
+    <a href="/review/" class="bespoke-button-solid mt-12 text-white px-6 py-3 rounded-md bg-primary hover:bg-secondary transition-all" style="color: var(--secondary);">See more reviews</a>
+</section>                              
 
 {% include 'components/cta.html' %}
 {% endblock %}
