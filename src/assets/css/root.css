@@ -203,49 +203,6 @@
 <---      Dark Mode Toggle      -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  body.dark-more #bespoke-navigation #dark-mode-toggle .bespoke-sun {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-  body.dark-more #bespoke-navigation #dark-mode-toggle .bespoke-moon {
-    opacity: 0;
-    transform: translate(-50%, -150%);
-    fill: #fff;
-  }
-  #bespoke-navigation #dark-mode-toggle {
-    z-index: 1000;
-    position: absolute;
-    right: 4.375rem;
-    display: block;
-    border: none;
-    background: transparent;
-    height: 3rem;
-    width: 3rem;
-    overflow: hidden;
-    padding: 0;
-  }
-  #bespoke-navigation #dark-mode-toggle img,
-  #bespoke-navigation #dark-mode-toggle svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 1.25rem;
-    width: 1.25rem;
-    pointer-events: none;
-  }
-  #bespoke-navigation #dark-mode-toggle .bespoke-moon {
-    z-index: 2;
-    transition: transform 0.3s, opacity 0.3s;
-  }
-  #bespoke-navigation #dark-mode-toggle .bespoke-sun {
-    z-index: 1;
-    opacity: 0;
-    transform: translate(-50%, 100%);
-    transition: transform 0.3s, opacity 0.3s;
-  }
-}
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
   #bespoke-navigation #dark-mode-toggle {
@@ -504,24 +461,6 @@
   }
 }
 /* Dark Mode */
-@media only screen and (max-width: 63.9375rem) {
-  body.dark-more #bespoke-navigation {
-    background-color: var(--dark);
-  }
-  body.dark-more #bespoke-navigation .bespoke-logo {
-    /* makes it white */
-    filter: grayscale(1) brightness(1000%);
-  }
-  body.dark-more #bespoke-navigation .bespoke-line {
-    background-color: #fff;
-  }
-  body.dark-more #bespoke-navigation .bespoke-ul-wrapper {
-    background-color: var(--medium);
-  }
-  body.dark-more #bespoke-navigation .bespoke-li-link {
-    color: var(--bodyTextColorWhite);
-  }
-}
 /*-- -------------------------- -->
 <---     Navigation Dropdown    -->
 <--- -------------------------- -*/
@@ -732,18 +671,6 @@
   }
 }
 /* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-more #bespoke-navigation .bespoke-drop-ul {
-    background-color: var(--dark);
-  }
-  body.dark-more #bespoke-navigation .bespoke-li-link.bespoke-drop-link:hover {
-    background-color: var(--medium);
-  }
-  body.dark-more #bespoke-navigation .bespoke-drop-icon {
-    /* turns it white */
-    filter: grayscale(1) brightness(1000%);
-  }
-}
 /*-- -------------------------- -->
 <---     Desktop Navigation     -->
 <--- -------------------------- -*/
@@ -839,21 +766,6 @@
   }
 }
 /* Dark Mode */
-@media only screen and (min-width: 64rem) {
-  body.dark-more #bespoke-navigation {
-    background-color: var(--dark);
-  }
-  body.dark-more #bespoke-navigation .bespoke-logo {
-    /* makes it turn white */
-    filter: grayscale(1) brightness(1000%);
-  }
-  body.dark-more #bespoke-navigation .bespoke-li-link {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-more #bespoke-navigation .bespoke-li-link:before {
-    background-color: var(--primaryLight);
-  }
-}
 /*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -*/
@@ -1246,24 +1158,6 @@
   }
 }
 /* Dark Mode */
-@media only screen and (max-width: 63.9375rem) {
-  body.dark-more #bespoke-mobile-navigation {
-    background-color: var(--dark);
-  }
-  #bespoke-mobile-navigation .bespoke-logo {
-    /* makes it white */
-    filter: grayscale(1) brightness(1000%);
-  }
-  body.dark-more #bespoke-mobile-navigation .bespoke-ul-wrapper {
-    background-color: var(--dark);
-  }
-  body.dark-more #bespoke-mobile-navigation .bespoke-li-link {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-more #bespoke-mobile-navigation .bespoke-container {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-}
 /*-- -------------------------- -->
   <---     Desktop Navigation     -->
   <--- -------------------------- -*/
@@ -1558,35 +1452,6 @@
   }
 }
 /* Dark Mode */
-@media only screen and (min-width: 64rem) {
-  body.dark-more #bespoke-mobile-navigation {
-    background-color: var(--dark);
-  }
-  body.dark-more #bespoke-mobile-navigation .bespoke-header,
-  body.dark-more #bespoke-mobile-navigation .bespoke-link-content {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-more #bespoke-mobile-navigation .bespoke-wrapper:before {
-    background-color: #fff;
-  }
-  body.dark-more #bespoke-mobile-navigation .bespoke-call .bespoke-header {
-    opacity: 0.8;
-  }
-  body.dark-more #bespoke-mobile-navigation .bespoke-call .bespoke-link-content {
-    opacity: 1;
-  }
-  body.dark-more #bespoke-mobile-navigation .bespoke-link-content {
-    opacity: 0.8;
-  }
-  body.dark-more #bespoke-mobile-navigation .bespoke-bottom-bar {
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-  #bespoke-mobile-navigation .bespoke-logo,
-  #bespoke-mobile-navigation .bespoke-link-icon {
-    /* turns it white */
-    filter: grayscale(1) brightness(1000%);
-  }
-}
 /*-- -------------------------- -->
 <---   Interior Page Header     -->
 <--- -------------------------- -*/
@@ -1784,11 +1649,6 @@
   }
 }
 /* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-more #cta:after {
-    display: none;
-  }
-}
 /*-- -------------------------- -->
 <---           Footer           -->
 <--- -------------------------- -*/
@@ -2002,11 +1862,6 @@
   }
 }
 /* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-more #footer {
-    background: #061623;
-  }
-}
 /*-- -------------------------- -->
 <---          Gallery           -->
 <--- -------------------------- -*/
@@ -2112,11 +1967,6 @@
   }
 }
 /* Dark mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-more #gallery .bespoke-title {
-    color: var(--bodyTextColorWhite);
-  }
-}
 /*-- -------------------------- -->
 <---          Gallery           -->
 <--- -------------------------- -*/
@@ -2270,18 +2120,6 @@
   }
 }
 /* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-more #gallery-1897 {
-    background-color: var(--dark);
-  }
-  body.dark-more #gallery-1897 .bespoke-title,
-  body.dark-more #gallery-1897 .bespoke-item-text {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-more #gallery-1897 .bespoke-item {
-    background-color: var(--medium);
-  }
-}
 /*-- -------------------------- -->
 <---            CTA             -->
 <--- -------------------------- -*/
@@ -2522,28 +2360,6 @@
   }
 }
 /* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-more #reviews-1088 {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-  body.dark-more #reviews-1088 .bespoke-title,
-  body.dark-more #reviews-1088 .bespoke-text,
-  body.dark-more #reviews-1088 .bespoke-item-text,
-  body.dark-more #reviews-1088 .bespoke-name,
-  body.dark-more #reviews-1088 .bespoke-desc {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-more #reviews-1088 .bespoke-item {
-    background-color: var(--medium);
-  }
-  body.dark-more #reviews-1088 .bespoke-flex {
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-  body.dark-more #reviews-1088 .bespoke-text,
-  body.dark-more #reviews-1088 .bespoke-desc {
-    opacity: 0.8;
-  }
-}
 /*-- -------------------------- -->
 <---          Services          -->
 <--- -------------------------- -*/
@@ -2630,15 +2446,6 @@
   }
 }
 /* Dark mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-more #services {
-    background: var(--medium);
-  }
-  body.dark-more #services h2 {
-    font-weight: bold;
-    color: #fff;
-  }
-}
 /*-- -------------------------- -->
 <---        Why Choose          -->
 <--- -------------------------- -*/
@@ -2765,26 +2572,6 @@
   }
 }
 /* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-more #why-choose-1550 .bespoke-h2,
-  body.dark-more #why-choose-1550 .bespoke-item-text {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-more #why-choose-1550 .bespoke-icon-wrapper::before {
-    background-color: var(--medium);
-    opacity: 1;
-  }
-  body.dark-more #why-choose-1550 .bespoke-icon-wrapper .bespoke-icon {
-    filter: grayscale(1) brightness(1000%);
-  }
-  body.dark-more #why-choose-1550 .bespoke-item-text {
-    opacity: 0.8;
-  }
-  body.dark-more #why-choose-1550 .bespoke-background img {
-    opacity: 0.4;
-    filter: brightness(30%);
-  }
-}
 /*-- -------------------------- -->
 <---       Side By Side         -->
 <--- -------------------------- -*/
@@ -3093,24 +2880,6 @@
   }
 }
 /* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-more #steps-1173 .bespoke-title,
-  body.dark-more #steps-1173 .bespoke-text,
-  body.dark-more #steps-1173 .bespoke-item-text,
-  body.dark-more #steps-1173 .bespoke-h3 {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-more #steps-1173 .bespoke-text,
-  body.dark-more #steps-1173 .bespoke-item-text {
-    opacity: 0.8;
-  }
-  body.dark-more #steps-1173 .bespoke-graphic {
-    opacity: 0.05;
-  }
-  body.dark-more #steps-1173 .bespoke-icon {
-    filter: grayscale(1) brightness(1000%);
-  }
-}
 /*-- -------------------------- -->
 <---           Steps            -->
 <--- -------------------------- -*/
@@ -3271,24 +3040,6 @@
   }
 }
 /* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-more #steps-1172 .bespoke-title,
-  body.dark-more #steps-1172 .bespoke-text,
-  body.dark-more #steps-1172 .bespoke-item-text,
-  body.dark-more #steps-1172 .bespoke-h3 {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-more #steps-1172 .bespoke-text,
-  body.dark-more #steps-1172 .bespoke-item-text {
-    opacity: 0.8;
-  }
-  body.dark-more #steps-1172 .bespoke-graphic {
-    opacity: 0.05;
-  }
-  body.dark-more #steps-1172 .bespoke-icon {
-    filter: grayscale(1) brightness(1000%);
-  }
-}
 /*Custom Mobile Dropdown Styles*/
 #bespoke-mobile-navigation .bespoke-active > .bespoke-li-link > .bespoke-drop-icon {
   transform: rotate(180deg) translateY(50%);
