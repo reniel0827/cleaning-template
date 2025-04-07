@@ -12,6 +12,7 @@ eleventyNavigation:
 
 {% block head %}
 <link rel="stylesheet" href="/assets/css/about.css">
+<script src="https://cdn.tailwindcss.com"></script>
 {% endblock %}
 
 {% block body %}
@@ -20,12 +21,11 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="int-hero">
-    <h1 id="home-h">About Us</h1>
+    <h1 id="home-h" style="color: var(--primary);">About Us</h1>
     <picture>
-        <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-        <source media="(min-width: 601px)" srcset="/assets/images/cta-bg.webp">
-        <img aria-hidden="true" decoding="async" src="/assets/images/cta-bg.webp" alt="kitchen cabinets"
-            loading="eager" width="2500" height="1667">
+        <source media="(max-width: 600px)" srcset="/assets/images/aboutBg.png">
+        <source media="(min-width: 601px)" srcset="/assets/images/aboutBg.png">
+        <img aria-hidden="true" decoding="async" src="/assets/images/aboutBg.png" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
     </picture>
 </section>
 

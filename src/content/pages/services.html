@@ -12,6 +12,7 @@ eleventyNavigation:
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/projects.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 {% endblock %}
 
 {% block body %}
@@ -21,11 +22,11 @@ eleventyNavigation:
     <!-- ============================================ -->
 
     <section id="int-hero">
-        <h1 id="home-h">Services</h1>
+        <h1 id="home-h" style="color: var(--primary);">Services</h1>
         <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cta-bg.webp">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cta-bg.webp" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+            <source media="(max-width: 600px)" srcset="/assets/images/aboutBg.png">
+            <source media="(min-width: 601px)" srcset="/assets/images/aboutBg.png">
+            <img aria-hidden="true" decoding="async" src="/assets/images/aboutBg.png" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
         </picture>
     </section>
 
@@ -33,7 +34,7 @@ eleventyNavigation:
     <!--                  Services                    -->
     <!-- ============================================ -->
 
-    <section id="hero-1299" class="bespoke-services-only">
+    <!-- <section id="hero-1299" class="bespoke-services-only">
         <div class="bespoke-container">
             <ul class="bespoke-card-group">
                 <li class="bespoke-item">
@@ -82,138 +83,150 @@ eleventyNavigation:
                     </a>
                 </li>
             </ul>
-        </div>
+        </div> -->
         <!--Floating Arrow-->
-    </section>
+    <!-- </section> -->
+    <section id="services1" class="w-full h-[100] mt-12 text-center flex flex-col items-center">
+        <!-- <h4 class="bespoke-title bespoke-subtitle">Our Services</h4> -->
+        <div class="flex flex-col gap-y-12 max-w-[1000px] sm:flex sm:flex-row sm:flex-wrap sm:gap-12">
+            <div class=" w-3/4 h-[350px] max-w-[300px] flex flex-col mx-auto items-center bg-gray-50 border-[1px] rounded-xl sm:w-2/5" style="border-color: var(--secondary);">
+                <img src="/assets/images/residential.png" class="w-full h-1/2 object-cover">
+                <div class="flex flex-row justify-start items-center gap-x-2 w-[90%] h-12 rounded-3xl -mt-4" style="background-color: var(--secondary);">
+                    <div class="relative left-[4px] w-10 h-10 rounded-full" style="background-color: var(--primary);"></div>
+                    <h1 style="color: var(--bodyTextColorWhite)" class="text-center">Residential Cleaning</h1>
+                </div>
+                <div class="relative w-full flex flex-nowrap" style="font-size:clamp(8px,5vw,16px);">
+                    <h7> We provide thorough residential cleaning to keep your 
+                        home fresh, tidy, and welcoming with spotless spaces and sanitized surfaces.</h7>
+                </div>
+            </div>
+            <div class="w-3/4 h-[350px] max-w-[300px] flex flex-col mx-auto items-center bg-gray-50 border-[1px] rounded-xl sm:w-2/5" style="border-color: var(--secondary)">
+                <img src="/assets/images/moving.png" class="w-full h-1/2 object-cover">
+                <div class="flex flex-row justify-start items-center gap-x-2 w-[90%] h-12 rounded-3xl -mt-4" style="background-color: var(--secondary);">
+                    <div class="relative left-[4px] w-10 h-10 rounded-full" style="background-color: var(--primary);"></div>
+                    <h1 style="color: var(--bodyTextColorWhite)" class="text-center">Move-In/Move-Out Cleaning</h1>
+                </div>
+                <div class="relative w-full flex flex-nowrap" style="font-size:clamp(8px,5vw,16px);">
+                    <h7> Our move-in/move-out cleaning service ensures a spotless home before or after moving. 
+                        We clean every corner to make the space ready for new occupants.</h7>
+                </div>
+            </div>
+            <div class="w-3/4 h-[350px] max-w-[300px] flex flex-col mx-auto items-center bg-gray-50 border-[1px] rounded-xl sm:w-2/5" style="border-color: var(--secondary)">
+                <img src="/assets/images/deep.png" class="w-full h-1/2 object-cover">
+                <div class="flex flex-row justify-start items-center gap-x-2 w-[90%] h-12 rounded-3xl -mt-4" style="background-color: var(--secondary);">
+                    <div class="relative left-[4px] w-10 h-10 rounded-full" style="background-color: var(--primary);"></div>
+                    <h1 style="color: var(--bodyTextColorWhite)" class="text-center">Deep Cleaning</h1>
+                </div>
+                <div class="relative w-full flex flex-nowrap" style="font-size:clamp(8px,5vw,16px);">
+                    <h7> Our deep cleaning service goes beyond routine cleaning, 
+                        targeting neglected areas and offering a thorough scrub to restore your space to its pristine condition.</h7>
+                </div>
+            </div>
+            <div class="w-3/4 h-[350px] max-w-[300px] flex flex-col mx-auto items-center bg-gray-50 border-[1px] rounded-xl sm:w-2/5" style="border-color: var(--secondary)">
+                <img src="/assets/images/construction.png" class="w-full h-1/2 object-cover">
+                <div class="flex flex-row justify-start items-center gap-x-2 w-[90%] h-12 rounded-3xl -mt-4" style="background-color: var(--secondary);">
+                    <div class="relative left-[4px] w-10 h-10 rounded-full" style="background-color: var(--primary);"></div>
+                    <h1 style="color: var(--bodyTextColorWhite)" class="text-center">Post-Construction Cleaning</h1>
+                </div>
+                <div class="relative w-full flex flex-nowrap" style="font-size:clamp(8px,5vw,16px);">
+                    <h7>We specialize in cleaning up after construction 
+                        projects, removing dust, debris, and leftover materials to leave the space ready for use.</h7>
+                </div>
+            </div>
+            <div class="w-3/4 h-[350px] max-w-[300px] flex flex-col mx-auto items-center bg-gray-50 border-[1px] rounded-xl sm:w-2/5" style="border-color: var(--secondary)">
+                <img src="/assets/images/window.png" class="w-full h-1/2 object-cover">
+                <div class="flex flex-row justify-start items-center gap-x-2 w-[90%] h-12 rounded-3xl -mt-4" style="background-color: var(--secondary);">
+                    <div class="relative left-[4px] w-10 h-10 rounded-full" style="background-color: var(--primary);"></div>
+                    <h1 style="color: var(--bodyTextColorWhite)" class="text-center">Window Cleaning</h1>
+                </div>
+                <div class="relative w-full flex flex-nowrap" style="font-size:clamp(8px,5vw,16px);">
+                    <h7>Our professional window cleaning service leaves your windows sparkling and 
+                        streak-free, improving your view and the overall appearance of your home or office.</h7>
+                </div>
+            </div>
+            <div class="w-3/4 h-[350px] max-w-[300px] flex flex-col mx-auto items-center bg-gray-50 border-[1px] rounded-xl sm:w-2/5" style="border-color: var(--secondary)">
+                <img src="/assets/images/eco.png" class="w-full h-1/2 object-cover">
+                <div class="flex flex-row justify-start items-center gap-x-2 w-[90%] h-12 rounded-3xl -mt-4" style="background-color: var(--secondary);">
+                    <div class="relative left-[4px] w-10 h-10 rounded-full" style="background-color: var(--primary);"></div>
+                    <h1 style="color: var(--bodyTextColorWhite)" class="text-center">Eco-Friendly Cleaning</h1>
+                </div>
+                <div class="relative w-full flex flex-nowrap" style="font-size:clamp(8px,5vw,16px);">
+                    <h7>We provide green cleaning solutions using environmentally friendly products,
+                        ensuring your home or office stays clean and safe while reducing the environmental impact.</h7>
+                </div>
+            </div>
+        </div>
+        <a href="/contact/" class="bespoke-button-solid mt-12 mb-20" style="color: var(--secondary);">Get an estimate now</a>
+    </section>    
 
     <!-- ============================================ -->
     <!--               Before And After               -->
     <!-- ============================================ -->
 
-    <section id="gallery-1897">
-        <div class="bespoke-container">
-            <div class="bespoke-content">
-                <div class="bespoke-flex">
-                    <span class="bespoke-topper">Our Gallery</span>
-                    <h2 class="bespoke-title">Witness The Difference and Our Results</h2>
-                </div>
-                <a class="bespoke-button-solid" href="/services/">View All</a>
+    <section id="beforeAfter" class="mt-20 flex flex-col w-5/6 items-center justify-center mx-auto gap-y-8 pb-12">
+        <h4 class="bespoke-title bespoke-subtitle" style="color: var(--secondary);">Gallery</h4>
+        <h4 style="color:var(--bodyTextColor);" class="text-xl -mt-12" >"Click the Photo to see our Before and After"</h4>
+        <div class="flex flex-col w-full items-center justify-center mx-auto gap-y-8 lg:flex-row lg:flex-wrap lg:w-3/4">
+            <div class=" flex justify-center relative mx-auto max-w-[500px] cursor-pointer lg:max-w-[300px] xl:max-w-[400px]" onclick="swapImage('before1', 'after1')">
+                <img src="/assets/images/b1.png" id="before1" >
+                <img src="/assets/images/a1.png" id="after1" class="w-full h-full rounded-xl absolute top-0 left-0 opacity-0 transition-opacity duration-300" >
             </div>
-            <!--Gallery-->
-            <div class="bespoke-gallery">
-                <div class="bespoke-item">
-                    <p class="bespoke-item-text">Residential Cleaning</p>
-                    <div class="bespoke-picture-group">
-                        <picture class="bespoke-picture">
-                            <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/carpet_2-before-optimized.webp">
-                            <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/carpet_2-before-optimized.webp">
-                            <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/carpet_2-before-optimized.webp" alt="carpet 2 before" width="305" height="400">
-                        </picture>
-                        <span class="bespoke-tag">Before</span>
-                    </div>
-                    <div class="bespoke-picture-group">
-                        <picture class="bespoke-picture">
-                            <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/carpet_2-after-optimized.webp">
-                            <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/carpet_2-after-optimized.webp">
-                            <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/carpet_2-after-optimized.webp" alt="carpet 2 after" width="305" height="400">
-                        </picture>
-                        <span class="bespoke-tag">After</span>
-                    </div>
-                </div>
-                <div class="bespoke-item">
-                    <p class="bespoke-item-text">Commercial Cleaning</p>
-                    <div class="bespoke-picture-group">
-                        <picture class="bespoke-picture">
-                            <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/carpet_3-before-optimized.webp">
-                            <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/carpet_3-before-optimized.webp">
-                            <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/carpet_3-before-optimized.webp" alt="carpet 3 before" width="305" height="400">
-                        </picture>
-                        <span class="bespoke-tag">Before</span>
-                    </div>
-                    <div class="bespoke-picture-group">
-                        <picture class="bespoke-picture">
-                            <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/carpet_3-after-optimized.webp">
-                            <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/carpet_3-after-optimized.webp">
-                            <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/carpet_3-after-optimized.webp" alt="carpet 3 after" width="305" height="400">
-                        </picture>
-                        <span class="bespoke-tag">After</span>
-                    </div>
-                </div>
-                <div class="bespoke-item">
-                    <p class="bespoke-item-text">Carpet Cleaning</p>
-                    <div class="bespoke-picture-group">
-                        <picture class="bespoke-picture">
-                            <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/carpet_1-before-optimized.webp">
-                            <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/carpet_1-before-optimized.webp">
-                            <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/carpet_1-before-optimized.webp" alt="carpet 1 before" width="305" height="400">
-                        </picture>
-                        <span class="bespoke-tag">Before</span>
-                    </div>
-                    <div class="bespoke-picture-group">
-                        <picture class="bespoke-picture">
-                            <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/carpet_1-after-optimized.webp">
-                            <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/carpet_1-after-optimized.webp">
-                            <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/carpet_1-after-optimized.webp" alt="carpet 1 after" width="305" height="400">
-                        </picture>
-                        <span class="bespoke-tag">After</span>
-                    </div>
-                </div>
-                <div class="bespoke-item">
-                    <p class="bespoke-item-text">Carpet Cleaning</p>
-                    <div class="bespoke-picture-group">
-                        <picture class="bespoke-picture">
-                            <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/carpet_4-before-optimized.webp">
-                            <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/carpet_4-before-optimized.webp">
-                            <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/carpet_4-before-optimized.webp" alt="carpet 4 before" width="305" height="400">
-                        </picture>
-                        <span class="bespoke-tag">Before</span>
-                    </div>
-                    <div class="bespoke-picture-group">
-                        <picture class="bespoke-picture">
-                            <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/carpet_4-after-optimized.webp">
-                            <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/carpet_4-after-optimized.webp">
-                            <img loading="lazy" decoding="async" src="{{ client.domain }}/assets/images/carpet_4-after-optimized.webp" alt="gallery" width="305" height="400">
-                        </picture>
-                        <span class="bespoke-tag">After</span>
-                    </div>
-                </div>
+            <div class=" flex justify-center relative mx-auto max-w-[500px] cursor-pointer lg:max-w-[300px] xl:max-w-[400px]" onclick="swapImage('before2', 'after2')">
+                <img src="/assets/images/b2.png" id="before2" >
+                <img src="/assets/images/a2.png" id="after2" class="w-full h-full rounded-xl absolute top-0 left-0 opacity-0 transition-opacity duration-300" >
             </div>
+            
         </div>
+        <a href="/gallery/" class="bespoke-button-solid" style="color: var(--secondary);">See More</a>
     </section>
+    <script>
+        function swapImage(beforeId, afterId) {
+            const beforeImage = document.getElementById(beforeId);
+            const afterImage = document.getElementById(afterId);
+            
+            if (afterImage.classList.contains('opacity-0')) {
+                beforeImage.classList.add('opacity-0');
+                afterImage.classList.remove('opacity-0');
+            } else {
+                beforeImage.classList.remove('opacity-0');
+                afterImage.classList.add('opacity-0');
+            }
+        }
+    </script>
 
     <!-- ============================================ -->
     <!--                     CTA                      -->
     <!-- ============================================ -->
 
-    <section id="cta-51">
+    <!-- <section id="cta-51">
         <div class="bespoke-container">
             <div class="bespoke-content">
                 <h3 class="bespoke-title">15% discount for new customers!</h3>
                 <a href="tel:587-335-2755" class="bespoke-button-solid">Avail</a>
             </div>
-        </div>
+        </div> -->
         <!-- Background Image-->
-        <picture class="bespoke-picture">
+        <!-- <picture class="bespoke-picture">
             <source media="(max-width: 600px)" srcset="{{client.domain}}/assets/images/cta-bg.webp">
             <source media="(min-width: 601px)" srcset="{{client.domain}}/assets/images/cta-bg.webp">
             <img loading="lazy" decoding="async" src="{{client.domain}}/assets/images/cta-bg.webp" alt="cabinets" width="1920" height="1280" aria-hidden="true">
         </picture>
-    </section>
+    </section> -->
 
     <!-- ============================================ -->
     <!--                   Gallery                    -->
     <!-- ============================================ -->
 
-    <section id="gallery">
+    <!-- <section id="gallery">
         <div class="bespoke-container">
             <span class="bespoke-topper">Our Portfolio</span>
             <h2 class="bespoke-title">Residential and Commercial Carpet Cleaning</h2>
             <p class="bespoke-text">We offer Complete Residential and Commercial Cleaning Services, including move-in/move-out cleaning, office cleaning, Airbnb turnover services, and more.</p>
-            <div class="bespoke-image-group">
+            <div class="bespoke-image-group"> -->
                 <!-- Row 1-->
-                <div class="bespoke-row bespoke-row-1">
+                <!-- <div class="bespoke-row bespoke-row-1"> -->
                     <!-- To add more images, copy and paste this row's picture tags here in order from bespoke-picture-1 to bespoke-picture-3 and they will maintain the same layout-->
-                    <picture class="bespoke-picture bespoke-picture1">
+                    <!-- <picture class="bespoke-picture bespoke-picture1">
                         <source media="(max-width: 600px)" srcset="/assets/images/portfolio/gallery1.webp">
                         <source media="(min-width: 601px)" srcset="/assets/images/portfolio/gallery1.webp">
                         <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/gallery1.webp" alt="gallery 1"
@@ -231,11 +244,11 @@ eleventyNavigation:
                         <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/gallery7.webp"
                             alt="gallery 3" loading="lazy" width="400" height="560">
                     </picture>
-                </div>
+                </div> -->
                 <!-- Row 2 -->
-                <div class="bespoke-row bespoke-row-2">
+                <!-- <div class="bespoke-row bespoke-row-2"> -->
                     <!-- To add more images, copy and paste this row's picture tags here in order from bespoke-picture-1 to bespoke-picture-3 and they will maintain the same layout-->
-                    <picture class="bespoke-picture bespoke-picture1">
+                    <!-- <picture class="bespoke-picture bespoke-picture1">
                         <source media="(max-width: 600px)" srcset="/assets/images/portfolio/gallery2.webp">
                         <source media="(min-width: 601px)" srcset="/assets/images/portfolio/gallery2.webp">
                         <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/gallery2.webp" alt="gallery 4"
@@ -253,11 +266,11 @@ eleventyNavigation:
                         <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/gallery8.webp"
                             alt="gallery 6" loading="lazy" width="400" height="560">
                     </picture>
-                </div>
+                </div> -->
                 <!-- Row 3 -->
-                <div class="bespoke-row bespoke-row-3">
+                <!-- <div class="bespoke-row bespoke-row-3"> -->
                     <!-- To add more images, copy and paste this row's picture tags here in order from bespoke-picture-1 to bespoke-picture-3 and they will maintain the same layout-->
-                    <picture class="bespoke-picture bespoke-picture1">
+                    <!-- <picture class="bespoke-picture bespoke-picture1">
                         <source media="(max-width: 600px)" srcset="/assets/images/portfolio/gallery3.webp">
                         <source media="(min-width: 601px)" srcset="/assets/images/portfolio/gallery3.webp">
                         <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port3.jpg" alt="gallery 7"
@@ -279,9 +292,67 @@ eleventyNavigation:
                 </div>
             </div>
             <a href="/services/" class="bespoke-button-solid">View Full Gallery</a>
+        </div> -->
+    <!-- </section> -->
+    <section id="portfolio" class="w-full mx-auto text-center mt-20 mb-20">
+        <h4 class="bespoke-title bespoke-subtitle mx-auto" style="color: var(--secondary);">Portfolio</h4>
+        <div class="flex flex-col items-center">
+            <!-- Large Displayed Image -->
+            <div class="w-[80vw] max-w-[500px] h-[300px]  bg-gray-300 rounded-lg overflow-hidden lg:hidden">
+                <img id="mainImage" src="/assets/images/cs1.png" class="w-full h-full object-cover">
+            </div>
+    
+            <!-- Thumbnail Navigation with Arrows -->
+            <div class="flex items-center mt-4 w-[80vw] max-w-[500px] lg:max-w-[80vw]">
+                <!-- Left Arrow -->
+                <button id="prevBtn" class="p-2 bg-gray-300 rounded-full mx-2 lg:hidden" style="background-color: var(--primary);">&lt;</button>
+    
+                <!-- Scrollable Thumbnails -->
+                <div id="thumbnailContainer" class="overflow-hidden lg:overflow-visible ">
+                    <div id="thumbnailWrapper" class="flex gap-2 transition-transform duration-300 lg:w-[80vw] lg:flex lg:flex-row lg:flex-wrap lg:justify-center">
+                        <img src="/assets/images/cs1.png" class="thumbnail w-16 h-16 rounded cursor-pointer border-2 border-transparent hover:border-gray-500 lg:w-96 lg:h-96" onclick="changeImage(this)">
+                        <img src="/assets/images/cs2.png" class="thumbnail w-16 h-16 rounded cursor-pointer border-2 border-transparent hover:border-gray-500 lg:w-96 lg:h-96" onclick="changeImage(this)">
+                        <img src="/assets/images/cs3.png" class="thumbnail w-16 h-16 rounded cursor-pointer border-2 border-transparent hover:border-gray-500 lg:w-96 lg:h-96" onclick="changeImage(this)">
+                        <img src="/assets/images/cs4.png" class="thumbnail w-16 h-16 rounded cursor-pointer border-2 border-transparent hover:border-gray-500 lg:w-96 lg:h-96" onclick="changeImage(this)">
+                        <img src="/assets/images/a1.png" class="thumbnail w-16 h-16 rounded cursor-pointer border-2 border-transparent hover:border-gray-500 lg:w-96 lg:h-96" onclick="changeImage(this)">
+                        <img src="/assets/images/a2.png" class="thumbnail w-16 h-16 rounded cursor-pointer border-2 border-transparent hover:border-gray-500 lg:w-96 lg:h-96" onclick="changeImage(this)">
+                        <img src="/assets/images/a3.png" class="thumbnail w-16 h-16 rounded cursor-pointer border-2 border-transparent hover:border-gray-500 lg:w-96 lg:h-96" onclick="changeImage(this)">
+                        <img src="/assets/images/b3.png" class="thumbnail w-16 h-16 rounded cursor-pointer border-2 border-transparent hover:border-gray-500 lg:w-96 lg:h-96" onclick="changeImage(this)">
+                    </div>
+                </div>
+    
+                <!-- Right Arrow -->
+                <button id="nextBtn" class="p-2 bg-gray-300 rounded-full mx-2 lg:hidden" style="background-color: var(--primary);">&gt;</button>
+            </div>
         </div>
+        <a href="/portfolio/" class="bespoke-button-solid mt-12" style="color: var(--secondary);">Go to Porfolio</a>
+        <script>
+            function changeImage(thumbnail) {
+                document.getElementById("mainImage").src = thumbnail.src;
+            }
+    
+            const thumbnailWrapper = document.getElementById("thumbnailWrapper");
+            const prevBtn = document.getElementById("prevBtn");
+            const nextBtn = document.getElementById("nextBtn");
+    
+            let scrollAmount = 0;
+            const scrollStep = 100; // Amount to scroll on arrow click
+    
+            prevBtn.addEventListener("click", () => {
+                scrollAmount -= scrollStep;
+                if (scrollAmount < 0) scrollAmount = 0;
+                thumbnailWrapper.style.transform = `translateX(-${scrollAmount}px)`;
+            });
+    
+            nextBtn.addEventListener("click", () => {
+                scrollAmount += scrollStep;
+                if (scrollAmount > thumbnailWrapper.scrollWidth - thumbnailWrapper.clientWidth) {
+                    scrollAmount = thumbnailWrapper.scrollWidth - thumbnailWrapper.clientWidth;
+                }
+                thumbnailWrapper.style.transform = `translateX(-${scrollAmount}px)`;
+            });
+        </script>
     </section>
-
     {% include 'components/cta.html' %}
 
 {% endblock %}
