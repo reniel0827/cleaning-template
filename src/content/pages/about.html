@@ -33,10 +33,10 @@ eleventyNavigation:
 <!--                 Side By Side                 -->
 <!-- ============================================ -->
 
-<section id="sbs">
-    <div class="bespoke-container">
+<!-- <section id="sbs">
+    <div class="bespoke-container"> -->
         <!-- Left Image Section -->
-        <div class="bespoke-left">
+        <!-- <div class="bespoke-left">
             <picture class="bespoke-picture bespoke-picture1">
                 <source media="(max-width: 600px)" srcset="{{ client.domain }}/assets/images/about-us-backphoto.webp">
                 <source media="(min-width: 601px)" srcset="{{ client.domain }}/assets/images/about-us-backphoto.webp">
@@ -49,9 +49,9 @@ eleventyNavigation:
                 <img aria-hidden="true" decoding="async" src="{{ client.domain }}/assets/images/about-us-optimized.webp" alt="about us"
                     loading="lazy" width="400" height="563">
             </picture>
-        </div>
+        </div> -->
         <!-- Right Content Section-->
-        <div class="bespoke-right">
+        <!-- <div class="bespoke-right">
             <span class="bespoke-topper">About Us</span>
             <h2 class="bespoke-title">YEG Carpet Cleaning Services</h2>
             <p class="bespoke-text">
@@ -73,13 +73,40 @@ eleventyNavigation:
             <a href="/about/" class="bespoke-button-solid">More About Us</a>
         </div>
     </div>
+</section> -->
+<section id="About Us" class="flex flex-col items-center  relative pb-12 pt-12" >
+    <!-- style="background-image:url('/assets/images/aboutBg.png');opacity: 1;" -->
+    
+    <div class="flex flex-col items-center gap-y-8 lg:flex-row lg:justify-center lg:gap-2 lg:w-3/4 lg:items-start">
+        <div class="flex flex-col items-center w-3/4 lg:w-full">
+            <h4 style="color:var(--bodyTextColorWhite);" class="text-xl" >"Bringing Shine to Every Space, One Clean at a Time!"</h4>
+            <h4 style="color:var(--bodyTextColorWhite);font-style: italic;" class="relative self-end mt-4 mb-4">-  Cleaning Company</h4>
+            <img src="/assets/images/aboutCleaners.png" class="w-full h-full rounded-3xl max-h-[510px] max-w-[517px]">
+        </div>
+        <div class="flex flex-col items-center w-full gap-y-4">
+            <div class="flex flex-row flex-nowrap gap-x-4 lg:h-[150px]" style="overflow: hidden;">
+                <img src="/assets/images/cleaner1.png" style="max-height:clamp(50px,25vw,300px);width: auto;object-fit: contain;">
+                <img src="/assets/images/cleaner2.png" style="max-height:clamp(50px,25vw,300px);width: auto;object-fit: contain;">
+            </div>
+            <div class="flex flex-col items-center w-3/4">
+                <h4 class="bespoke-title bespoke-subtitle" style="color: var(--secondary);">Cleaning Company</h4>
+                <h4 style="color:var(--secondary);" style="text-align: center;">Our cleaning company started with a simple mission: to provide reliable,
+                 high-quality cleaning services that make homes and businesses shine. What began as a small, dedicated team has grown 
+                 into a trusted name in the industry, built on professionalism, attention to detail, and a commitment to customer 
+                 satisfaction. Today, we continue to set the standard for excellence, ensuring every space we clean is spotless, 
+                 fresh, and welcoming.</h4>
+            </div>
+            <a href="/contact/" class="bespoke-button-solid mt-12 mb-8" style="color: var(--secondary);">Get an estimate now</a>
+        </div>
+       
+    </div>
+    
 </section>
-
 <!-- ============================================ -->
 <!--            Side By Side Reverse              -->
 <!-- ============================================ -->
 
-<section id="sbsr-457">
+<!-- <section id="sbsr-457">
     <div class="bespoke-container">
         <div class="bespoke-content">
             <span class="bespoke-topper">Equipments</span>
@@ -94,9 +121,38 @@ eleventyNavigation:
             <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/equipments.webp" alt="equipments" width="649" height="617">
         </picture>
     </div>
-</section>
+</section> -->
                                 
-
+<section id="beforeAfter" class=" flex flex-col w-5/6 items-center justify-center mx-auto gap-y-8 pb-12 pt-12" style="background-image: url('/assets/images/aboutBg.png');">
+    <h4 class="bespoke-title bespoke-subtitle" style="color: var(--primary);">Gallery</h4>
+    <h4 style="color:var(--bodyTextColorWhite);" class="text-xl -mt-12" >"Click the Photo to see our Before and After"</h4>
+    <div class="flex flex-col w-full items-center justify-center mx-auto gap-y-8 lg:flex-row lg:flex-wrap lg:w-3/4">
+        <div class=" flex justify-center relative mx-auto max-w-[500px] cursor-pointer lg:max-w-[300px] xl:max-w-[400px]" onclick="swapImage('before1', 'after1')">
+            <img src="/assets/images/b1.png" id="before1" >
+            <img src="/assets/images/a1.png" id="after1" class="w-full h-full rounded-xl absolute top-0 left-0 opacity-0 transition-opacity duration-300" >
+        </div>
+        <div class=" flex justify-center relative mx-auto max-w-[500px] cursor-pointer lg:max-w-[300px] xl:max-w-[400px]" onclick="swapImage('before2', 'after2')">
+            <img src="/assets/images/b2.png" id="before2" >
+            <img src="/assets/images/a2.png" id="after2" class="w-full h-full rounded-xl absolute top-0 left-0 opacity-0 transition-opacity duration-300" >
+        </div>
+        
+    </div>
+    <a href="/gallery/" class="bespoke-button-solid" style="color: var(--secondary);">See More</a>
+</section>
+<script>
+    function swapImage(beforeId, afterId) {
+        const beforeImage = document.getElementById(beforeId);
+        const afterImage = document.getElementById(afterId);
+        
+        if (afterImage.classList.contains('opacity-0')) {
+            beforeImage.classList.add('opacity-0');
+            afterImage.classList.remove('opacity-0');
+        } else {
+            beforeImage.classList.remove('opacity-0');
+            afterImage.classList.add('opacity-0');
+        }
+    }
+</script>
 {% include 'components/cta.html' %}
 
 {% endblock %}
