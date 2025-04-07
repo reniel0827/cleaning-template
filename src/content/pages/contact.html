@@ -12,6 +12,7 @@ eleventyNavigation:
 
 {% block head %}
 <link rel="stylesheet" href="/assets/css/contact.css">
+<script src="https://cdn.tailwindcss.com"></script>
 {% endblock %}
 
 {% block body %}
@@ -23,10 +24,9 @@ eleventyNavigation:
 <section id="int-hero">
     <h1 id="home-h">Contact Us</h1>
     <picture>
-        <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-        <source media="(min-width: 601px)" srcset="/assets/images/cta-bg.webp">
-        <img aria-hidden="true" decoding="async" src="/assets/images/cta-bg.webp" alt="kitchen cabinets"
-            loading="eager" width="2500" height="1667">
+        <source media="(max-width: 600px)" srcset="/assets/images/aboutBg.png">
+        <source media="(min-width: 601px)" srcset="/assets/images/aboutBg.png">
+        <img aria-hidden="true" decoding="async" src="/assets/images/aboutBg.png" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
     </picture>
 </section>
                                 
@@ -38,8 +38,8 @@ eleventyNavigation:
     <div class="bespoke-container">
         <div class="bespoke-content">
             <span class="bespoke-topper">Contact Us</span>
-            <h2 class="bespoke-title">Call Us for Clean Homes, Offices & Carpets Today!<br />
-                Or Book Online anytime for your convenience!
+            <h2 class="bespoke-title">Call Us for Sparkling Clean Homes, Offices, and Surrounding Areas!
+                Or Book Online Anytime for Your Convenience!
             </h2>
             <!--Form-->
             <form netlify class="bespoke-form" id="bespoke-form-322" name="Contact Form" method="post">
@@ -52,14 +52,14 @@ eleventyNavigation:
                 <label class="bespoke-label bespoke-phone">
                     <input class="bespoke-input" required type="text" id="phone-322" name="phone" placeholder="Phone">
                 </label>
-                <label class="bespoke-label bespoke-services">
+                <!-- <label class="bespoke-label bespoke-services">
                     <select class="bespoke-input bespoke-select" required name="service" id="message-322" >
                         <option class="bespoke-option bespoke-option-placeholder bespoke-input" value="">Select Service</option>
                         <option class="bespoke-option bespoke-input" value="Residential Cleaning">Residential Cleaning</option>
                         <option class="bespoke-option bespoke-input" value="Commercial Cleaning">Commercial Cleaning</option>
                         <option class="bespoke-option bespoke-input" value="Carpet Cleaning Cleaning">Carpet Cleaning Cleaning</option>
                     </select>
-                </label>
+                </label> -->
                 <button class="bespoke-button-solid bespoke-submit" type="submit">Book Now</button>
             </form>
         </div>

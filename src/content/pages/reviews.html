@@ -12,6 +12,8 @@ eleventyNavigation:
 
 {% block head %}
 <link rel="stylesheet" href="/assets/css/reviews.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
@@ -22,11 +24,10 @@ eleventyNavigation:
 
 <section id="int-hero">
     <h1 id="home-h">Our Reviews</h1>
-    <picture class="bespoke-picture">
-        <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp">
-        <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg">
-        <img aria-hidden="true" decoding="async" src="/assets/images/landing.jpg" alt="new home" width="2500"
-            height="1667" loading="eager">
+    <picture>
+        <source media="(max-width: 600px)" srcset="/assets/images/aboutBg.png">
+        <source media="(min-width: 601px)" srcset="/assets/images/aboutBg.png">
+        <img aria-hidden="true" decoding="async" src="/assets/images/aboutBg.png" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
     </picture>
 </section>
 
@@ -34,7 +35,7 @@ eleventyNavigation:
 <!--                   Reviews                    -->
 <!-- ============================================ -->
 
-<section id="reviews-1088">
+<!-- <section id="reviews-1088">
     <div class="bespoke-container">
         <div class="bespoke-content">
             <span class="bespoke-topper">Testimonials</span>
@@ -118,8 +119,149 @@ eleventyNavigation:
             </li>
         </ul>
     </div>
-</section>
+</section> -->
+<section id="reviews" class="flex flex-col items-center  pb-8 ">
+    
+    <div class="flex flex-col sm:flex-row sm:gap-8 sm:flex-wrap justify-center items-center">
 
+        <!-- Review 1 -->
+        <div class="p-6 rounded-xl shadow-md w-[80vw] min-w-[100px] max-w-[300px] mb-6 md:mb-0 lg:max-w-[400px]">
+            <div class="pt-8 pb-2" style="background-color: var(--secondary);">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="/assets/images/reviewer.png" alt="Sarah T." class="w-16 h-16 rounded-full border-2 border-primary">
+                </div>
+                <h3 class="font-semibold text-xl ml-4" style="color: var(--bodyTextColorWhite);">Sarah T.</h3>
+                <div class="text-yellow-500 mb-2 ml-4">
+                    ⭐️⭐️⭐️⭐️⭐️
+                </div>
+            </div>
+            <p class="text-gray-600 mb-4">"The cleaning team did an amazing job on my house! They were thorough, professional, and really paid attention to every detail. My home has never looked better, and I appreciate their eco-friendly products. Highly recommend!"</p>
+            <p class="text-sm text-gray-500">Date: March 25, 2025</p>
+        </div>
+        
+        <!-- Review 2 -->
+        <div class="p-6 rounded-xl shadow-md w-[80vw] min-w-[100px] max-w-[300px] mb-6 md:mb-0 lg:max-w-[400px]">
+            <div class="pt-8 pb-2" style="background-color: var(--secondary);">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="/assets/images/reviewer.png" alt="Mark L." class="w-16 h-16 rounded-full border-2 border-primary">
+                </div>
+                <h3 class="font-semibold text-xl ml-4" style="color: var(--bodyTextColorWhite);">Mark L.</h3>
+                <div class="text-yellow-500 mb-2 ml-4">
+                    ⭐️⭐️⭐️⭐️⭐️
+                </div>
+            </div>
+            <p class="text-gray-600 mb-4">"I hired this cleaning service for my office, and they exceeded my expectations. The team was punctual, friendly, and made sure everything was spotless. It's great knowing we have a clean and safe environment for our employees."</p>
+            <p class="text-sm text-gray-500">Date: February 18, 2025</p>
+        </div>
+        
+        <!-- Review 3 -->
+        <div class="p-6 rounded-xl shadow-md w-[80vw] min-w-[100px] max-w-[300px] mb-6 md:mb-0 lg:max-w-[400px]">
+            <div class="pt-8 pb-2" style="background-color: var(--secondary);">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="/assets/images/reviewer.png" alt="Linda P." class="w-16 h-16 rounded-full border-2 border-primary">
+                </div>
+                <h3 class="font-semibold text-xl ml-4" style="color: var(--bodyTextColorWhite);">Linda P.</h3>
+                <div class="text-yellow-500 mb-2 ml-4">
+                    ⭐️⭐️⭐️⭐️⭐️
+                </div>
+            </div>
+            <p class="text-gray-600 mb-4">"Fantastic service! I’ve used many cleaning services in the past, but none have been as reliable and efficient as this one. They did a deep clean on my carpets and upholstery, and everything looks like new again!"</p>
+            <p class="text-sm text-gray-500">Date: January 10, 2025</p>
+        </div>
+        
+        <!-- Review 4 -->
+        <div class="p-6 rounded-xl shadow-md w-[80vw] min-w-[100px] max-w-[300px] mb-6 md:mb-0 lg:max-w-[400px]">
+            <div class="pt-8 pb-2" style="background-color: var(--secondary);">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="/assets/images/reviewer.png" alt="Alex M." class="w-16 h-16 rounded-full border-2 border-primary">
+                </div>
+                <h3 class="font-semibold text-xl ml-4" style="color: var(--bodyTextColorWhite);">Alex M.</h3>
+                <div class="text-yellow-500 mb-2 ml-4">
+                    ⭐️⭐️⭐️⭐️⭐️
+                </div>
+            </div>
+            <p class="text-gray-600 mb-4">"I’m so impressed with how clean my home feels after the team came in. The staff was professional and friendly, and they made sure everything was cleaned exactly how I wanted. I’ll definitely be using their services regularly."</p>
+            <p class="text-sm text-gray-500">Date: December 5, 2024</p>
+        </div>
+        
+        <!-- Review 5 -->
+        <div class="p-6 rounded-xl shadow-md w-[80vw] min-w-[100px] max-w-[300px] mb-6 md:mb-0 lg:max-w-[400px]">
+            <div class="pt-8 pb-2" style="background-color: var(--secondary);">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="/assets/images/reviewer.png" alt="Emily D." class="w-16 h-16 rounded-full border-2 border-primary">
+                </div>
+                <h3 class="font-semibold text-xl ml-4" style="color: var(--bodyTextColorWhite);">Emily D.</h3>
+                <div class="text-yellow-500 mb-2 ml-4">
+                    ⭐️⭐️⭐️⭐️⭐️
+                </div>
+            </div>
+            <p class="text-gray-600 mb-4">"I had a last-minute request for a cleaning before a family gathering, and they accommodated me right away. They did an outstanding job, and my home was sparkling! Will definitely hire them again for my next event."</p>
+            <p class="text-sm text-gray-500">Date: November 22, 2024</p>
+        </div>
+        
+        <!-- Review 6 -->
+        <div class="p-6 rounded-xl shadow-md w-[80vw] min-w-[100px] max-w-[300px] mb-6 md:mb-0 lg:max-w-[400px]">
+            <div class="pt-8 pb-2" style="background-color: var(--secondary);">
+                <div class="flex items-center justify-center mb-4">
+                    <img src="/assets/images/reviewer.png" alt="James F." class="w-16 h-16 rounded-full border-2 border-primary">
+                </div>
+                <h3 class="font-semibold text-xl ml-4" style="color: var(--bodyTextColorWhite);">James F.</h3>
+                <div class="text-yellow-500 mb-2 ml-4">
+                    ⭐️⭐️⭐️⭐️⭐️
+                </div>
+            </div>
+            <p class="text-gray-600 mb-4">"The team did an excellent job cleaning our office space. It’s clear that they take pride in their work. The staff is courteous and hardworking. We’ve been using them for months, and I couldn't be happier with the results!"</p>
+            <p class="text-sm text-gray-500">Date: October 15, 2024</p>
+        </div>
+        
+        
+    </div>
+    <a href="/contact/" class="bespoke-button-solid mt-12 mb-20" style="color: var(--secondary);">Get an estimate now</a>
+</section>   
+<section id="whyChooseUs" class="w-full text-center mx-auto pt-12 pb-12 bg-cover bg-center" style="background-image:url('/assets/images/aboutBg.png');">
+    <h4 class="bespoke-title bespoke-subtitle mx-auto text-white" style="color: var(--primary);">Why Choose Us?</h4>
+    <h4 style="color:var(--bodyTextColorWhite);" class="w-full sm:w-3/4 mt-4 text-center mx-auto">At our cleaning company, we prioritize quality, 
+        reliability, and customer satisfaction. Here’s why clients choose us:</h4>
+    <div class="flex flex-col items-center gap-y-4 mx-auto mt-8 md:w-4/5 md:flex md:flex-row md:flex-wrap md:gap-4 md:justify-center">
+
+        <!-- Card 1 -->
+        <div class="w-3/4 max-w-[300px] sm:w-2/5 md:w-2/5 bg-white shadow-md rounded-2xl p-6 flex flex-col items-start gap-4 justify-center md:h-60 lg:max-w-[400px]">
+            <span class="material-icons text-4xl" style="color:var(--primary)">groups</span>
+            <h3 class="text-xl font-semibold">Experienced Team</h3>
+            <p class="text-sm text-gray-600">Our trained professionals bring years of experience and attention to detail to every job.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="w-3/4 max-w-[300px]  sm:w-2/5 md:w-2/5 bg-white shadow-md rounded-2xl p-6 flex flex-col items-start gap-4 justify-center md:h-60 lg:max-w-[400px]">
+            <span class="material-icons text-4xl text-green-500" style="color:var(--primary)">tune</span>
+            <h3 class="text-xl font-semibold">Customized Cleaning</h3>
+            <p class="text-sm text-gray-600">We tailor our services to fit your specific needs and schedule.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="w-3/4 max-w-[300px]  sm:w-2/5 md:w-2/5 bg-white shadow-md rounded-2xl p-6 flex flex-col items-start gap-4 justify-center md:h-60 lg:max-w-[400px]">
+            <span class="material-icons text-4xl text-yellow-500" style="color:var(--primary)">verified_user</span>
+            <h3 class="text-xl font-semibold">Trusted & Reliable</h3>
+            <p class="text-sm text-gray-600">Punctual, dependable, and respectful of your space.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="w-3/4 max-w-[300px]  sm:w-2/5 md:w-2/5 bg-white shadow-md rounded-2xl p-6 flex flex-col items-start gap-4 justify-center md:h-60 lg:max-w-[400px]">
+            <span class="material-icons text-4xl text-emerald-500" style="color:var(--primary)">eco</span>
+            <h3 class="text-xl font-semibold">Eco-Friendly Products</h3>
+            <p class="text-sm text-gray-600">We use safe and effective cleaning products for a healthier environment.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="w-3/4 max-w-[300px]  sm:w-2/5 md:w-2/5 bg-white shadow-md rounded-2xl p-6 flex flex-col items-start gap-4 justify-center md:h-60 lg:max-w-[400px]">
+            <span class="material-icons text-4xl text-purple-500" style="color:var(--primary)">attach_money</span>
+            <h3 class="text-xl font-semibold">Affordable Rates</h3>
+            <p class="text-sm text-gray-600">High-quality cleaning services at competitive prices.</p>
+        </div>
+
+    </div>
+    <a href="/contact/" class="bespoke-button-solid mt-12 mb-20" style="color: var(--secondary);">Get an estimate now</a>
+</section>                           
 {% include 'components/cta.html' %}
 
 {% endblock %}

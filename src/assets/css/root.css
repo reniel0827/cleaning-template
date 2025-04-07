@@ -3030,14 +3030,6 @@
 #bespoke-mobile-navigation .bespoke-active > .bespoke-li-link > .bespoke-drop-icon {
   transform: rotate(180deg) translateY(50%);
 }
-#bespoke-mobile-navigation .bespoke-drop-icon {
-  position: absolute;
-  top: 50% ;
-  right: calc(-20 / 16 * 1rem);
-  transform: translateY(-50%);
-  height: auto;
-  width: 0.9375rem;
-}
 #bespoke-mobile-navigation .bespoke-drop-ul {
   visibility: hidden;
   opacity: 0;
