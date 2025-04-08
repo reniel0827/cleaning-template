@@ -191,22 +191,22 @@
                                         aria-expanded="false" aria-controls="dropdown-{{ entry.key }}"
                                         aria-label="dropdown-{{ entry.key }}">
                                         {{ entry.key }}
-                                        <!-- <img class="bespoke-drop-icon"
+                                        <img class="bespoke-drop-icon"
                                             src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg"
                                             alt="dropdown icon" width="15" height="15" decoding="async"
-                                            aria-hidden="true"> -->
+                                            aria-hidden="true">
                                     </button>
 
                                     {# Dropdowns have another ul/li set up within the parent li, which gets rendered in
                                     the same way as a normal link #}
-                                    <!-- <ul class="bespoke-drop-ul" id="dropdown-{{ entry.key }}">
+                                    <ul class="bespoke-drop-ul" id="dropdown-{{ entry.key }}">
                                         {% for child in entry.children %}
                                         <li class="bespoke-drop-li">
                                             <a href="{{ child.url }}" class="bespoke-li-link bespoke-drop-link">{{ child.key
                                                 }}</a>
                                         </li>
                                         {% endfor %}
-                                    </ul> -->
+                                    </ul>
                                     {% else %}
                                     {# Normal pages are rendered as <a> tags, in the normal way you'd expect #}
                                         <a href="{{ entry.url }}"
